@@ -6,7 +6,6 @@ class Api::SessionsController < ApplicationController
   def show
       @user = current_user
       if @user
-          debugger
           render 'api/users/show'
       else
           render json: { user: nil }
@@ -17,9 +16,9 @@ class Api::SessionsController < ApplicationController
       email = params[:email]
       password = params[:password]
       @user = User.find_by_credentials(email, password)
-      
+
       if @user
-          login(@user)
+          login!(@user)
           render 'api/users/show'
       else
           render json: { errors: ['Invalid credentials'] }, status: 422
@@ -27,7 +26,7 @@ class Api::SessionsController < ApplicationController
   end
 
   def destroy
-      logout
+      logout!
       head :no_content # populate http response with no content => no body
   end
   
