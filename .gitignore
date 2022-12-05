@@ -21,8 +21,10 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/public
 
 # Other things
+/sublimus/node_modules
 .byebug_history
 .DS_Store
 .vscode
