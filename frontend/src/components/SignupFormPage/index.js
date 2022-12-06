@@ -8,7 +8,6 @@ function SignupFormPage() {
   const dispatch = useDispatch();
   const sessionUser = useSelector((state) => state.session.user);
   const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
@@ -19,20 +18,20 @@ function SignupFormPage() {
     e.preventDefault();
     if (password === confirmPassword) {
       setErrors([]);
-      return dispatch(
-        sessionActions.signup({ email, username, password })
-      ).catch(async (res) => {
-        let data;
-        try {
-          // .clone() essentially allows you to read the response body twice
-          data = await res.clone().json();
-        } catch {
-          data = await res.text(); // Will hit this case if the server is down
+      return dispatch(sessionActions.signup({ email, password })).catch(
+        async (res) => {
+          let data;
+          try {
+            // .clone() essentially allows you to read the response body twice
+            data = await res.clone().json();
+          } catch {
+            data = await res.text(); // Will hit this case if the server is down
+          }
+          if (data?.errors) setErrors(data.errors);
+          else if (data) setErrors([data]);
+          else setErrors([res.statusText]);
         }
-        if (data?.errors) setErrors(data.errors);
-        else if (data) setErrors([data]);
-        else setErrors([res.statusText]);
-      });
+      );
     }
     return setErrors([
       "Confirm Password field must be the same as the Password field",
@@ -50,19 +49,9 @@ function SignupFormPage() {
       <label>
         Email
         <input
-          type="text"
+          type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </label>
-      <br />
-      <label>
-        Username
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
           required
         />
       </label>
