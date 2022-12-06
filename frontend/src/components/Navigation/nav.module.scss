@@ -1,0 +1,35 @@
+.navHead {
+    max-width: 800px;
+    padding: 32px 24px;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 14px;
+    .home {
+        width:auto;
+        margin-right: auto;
+    }
+}
+
+.profileButton {
+    cursor: pointer;
+}
+
+.profileLink {
+    font: 400 .9rem 'Figtree',
+        sans-serif;
+    text-decoration: none;
+    color: dimgrey;
+    &:hover {
+        color: black;
+    }
+}
+
+.home {
+    cursor: pointer;
+}
