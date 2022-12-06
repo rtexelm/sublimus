@@ -24,7 +24,7 @@
 /public
 
 # Other things
-/sublimus/node_modules
+/frontend/node_modules
 .byebug_history
 .DS_Store
 .vscode
