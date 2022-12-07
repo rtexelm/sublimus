@@ -36,6 +36,14 @@ function LoginFormPage() {
     <section className={styles.content}>
       <div className={styles.loginForm}>
         <header>SIGN IN</header>
+        <p>
+          Sign into your My Sublimus account to build your Selections and Wish
+          Lists, manage your settings, and more!
+        </p>
+        <p>
+          If you're looking for your Sublimus Channel account, stop because
+          there is no such thing
+        </p>
         <form onSubmit={handleSubmit}>
           <ul>
             {errors.map((error) => (
@@ -66,7 +74,9 @@ function LoginFormPage() {
           </label>
           <br />
           <br />
-          <button type="submit">Log In</button>
+          <button className={styles.submit} type="submit">
+            Log In
+          </button>
         </form>
       </div>
       <div className={styles.right}></div>

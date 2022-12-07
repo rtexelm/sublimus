@@ -1,7 +1,12 @@
 .content {
     display: flex;
     flex-wrap: nowrap;
-
+    p {
+        margin-bottom: 20px;
+    }
+    header {
+        margin-bottom: 32px;
+    }
 }
 .loginForm {
     margin-right: 5.20833%;
@@ -21,8 +26,23 @@
 }
 
 .text {
+    font: 400 13px 'Figtree', sans-serif;
+    background-color: lightblue;
+    border: 0;
+    border-bottom: 2px lightgrey;
     width: 100%;
     padding: 11px 20px 11px 0;
     margin-bottom: 44px;
     font-size: 13px;
+}
+
+.submit {
+    font: 600 13px 'Figtree', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    background-color: #b4841e;
+    color: white;
+    width: 100%;
+    padding: 22px 10px;
+    border: 0;
 }
