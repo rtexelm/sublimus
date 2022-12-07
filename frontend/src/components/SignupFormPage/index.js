@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import * as sessionActions from "../../store/session";
-import "./SignupForm.module.css";
+import styles from "./SignupForm.module.scss";
 
 function SignupFormPage() {
   const dispatch = useDispatch();
@@ -39,46 +39,59 @@ function SignupFormPage() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <ul>
-        {errors.map((error) => (
-          <li key={error}>{error}</li>
-        ))}
-      </ul>
-      <br />
-      <label>
-        Email
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </label>
-      <br />
-      <label>
-        Password
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </label>
-      <br />
-      <label>
-        Confirm Password
-        <input
-          type="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          required
-        />
-      </label>
-      <br />
-      <br />
-      <button type="submit">Sign Up</button>
-    </form>
+    <div className={styles.content}>
+      <div className={styles.signupForm}>
+        <form onSubmit={handleSubmit}>
+          <ul>
+            {errors.map((error) => (
+              <li key={error}>{error}</li>
+            ))}
+          </ul>
+          <br />
+          <label>
+            <input
+              className={styles.text}
+              placeholder="E-Mail"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </label>
+          <br />
+          <label>
+            <input
+              className={styles.text}
+              placeholder="Password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </label>
+          <br />
+          <label>
+            <input
+              className={styles.text}
+              placeholder="Confirm Password"
+              type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+          </label>
+          <br />
+          <br />
+          <button className={styles.submit} type="submit">
+            Sign Up
+          </button>
+        </form>
+        <p className={styles.question}>ALREADY HAVE AN ACCOUNT?</p>
+        <p>
+          Sign into your account to manage your settings, track orders and more!
+        </p>
+      </div>
+    </div>
   );
 }
 

@@ -78,6 +78,11 @@ function LoginFormPage() {
             Log In
           </button>
         </form>
+        <p className={styles.question}>DON'T HAVE AN ACCOUNT?</p>
+        <p>
+          Sign up for a My Sublimus account to earn absolutely nothing, track
+          fake orders, and receive no announcements.
+        </p>
       </div>
       <div className={styles.right}></div>
     </section>
