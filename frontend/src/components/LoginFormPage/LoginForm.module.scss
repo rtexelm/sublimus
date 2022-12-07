@@ -6,17 +6,15 @@
     }
     header {
         margin-bottom: 32px;
-    }
-}
-.loginForm {
-    margin-right: 5.20833%;
-    margin-left: 48px;
-    header {
         font-family: 'Figtree', sans-serif;
         font-weight: 600;
         font-size: 1.6rem;
         letter-spacing: .8px;
     }
+}
+.loginForm {
+    margin-right: 5.20833%;
+    margin-left: 48px;
     input:focus {
         outline: none;
     }
@@ -41,6 +39,7 @@
 
 .submit {
     font: 600 13px 'Figtree', sans-serif;
+    cursor: pointer;
     text-transform: uppercase;
     margin-bottom: 16px;
     background-color: #b4841e;
@@ -65,3 +64,4 @@
     padding: 20px 0;
     border: 2px solid lightgrey;
 }
+

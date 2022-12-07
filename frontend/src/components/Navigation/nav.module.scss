@@ -16,15 +16,14 @@
     width: auto;
     margin-right: auto;
     .logoLink {
-        width: 63px;
-        height: 63px;
+        display: block;
         cursor: pointer;
     }
 }
 
-.profileButton {
-    cursor: pointer;
-}
+// .profileButton {
+//     cursor: pointer;
+// }
 
 // .profileLink {
 //     font: 400 .9rem 'Figtree',

@@ -33,11 +33,11 @@ function ProfileButton({ user }) {
   if (user) {
     return (
       <>
-        {/* <button onClick={openMenu}> */}
-        <i class="fa-regular fa-user fa-xl" onClick={openMenu}></i>
-        {/* </button> */}
+        <button className={styles.button} onClick={openMenu}>
+          <i class="fa-regular fa-user fa-xl"></i>
+        </button>
         {showMenu && (
-          <ul className="profile-dropdown">
+          <ul className={styles.profileDropdown}>
             <li>{user.username}</li>
             <li>{user.email}</li>
             <li>
@@ -50,18 +50,22 @@ function ProfileButton({ user }) {
   } else {
     return (
       <>
-        {/* <button onClick={openMenu}> */}
-        <i class="fa-regular fa-user fa-xl" onClick={openMenu}></i>
-        {/* </button> */}
+        <button className={styles.button} onClick={openMenu}>
+          <i class="fa-regular fa-user fa-xl"></i>
+        </button>
         {showMenu && (
-          <>
-            <NavLink className={styles.profileLink} to="/login">
-              Log In
-            </NavLink>
-            <NavLink className={styles.profileLink} to="/signup">
-              Sign Up
-            </NavLink>
-          </>
+          <ul className={styles.profileDropdown}>
+            <li>
+              <NavLink className={styles.profileLink} to="/login">
+                Log In
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className={styles.profileLink} to="/signup">
+                Sign Up
+              </NavLink>
+            </li>
+          </ul>
         )}
       </>
     );

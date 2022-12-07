@@ -48,7 +48,7 @@ function SignupFormPage() {
           and receive no offer or announcements!
         </p>
         <form onSubmit={handleSubmit}>
-          <ul>
+          <ul className="errors">
             {errors.map((error) => (
               <li key={error}>{error}</li>
             ))}

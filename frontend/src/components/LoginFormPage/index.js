@@ -46,7 +46,7 @@ function LoginFormPage() {
           there is no such thing
         </p>
         <form onSubmit={handleSubmit}>
-          <ul>
+          <ul className="errors">
             {errors.map((error) => (
               <li key={error}>{error}</li>
             ))}

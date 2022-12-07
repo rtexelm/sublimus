@@ -9,3 +9,7 @@ body {
 a {
     text-decoration: none;
 }
+
+.errors {
+    color: red;
+}
