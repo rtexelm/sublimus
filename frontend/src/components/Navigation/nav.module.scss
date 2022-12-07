@@ -10,9 +10,15 @@
     justify-content: flex-end;
     align-items: center;
     gap: 14px;
-    .home {
-        width:auto;
-        margin-right: auto;
+}
+
+.home {
+    width: auto;
+    margin-right: auto;
+    .logoLink {
+        width: 63px;
+        height: 63px;
+        cursor: pointer;
     }
 }
 
@@ -20,16 +26,12 @@
     cursor: pointer;
 }
 
-.profileLink {
-    font: 400 .9rem 'Figtree',
-        sans-serif;
-    text-decoration: none;
-    color: dimgrey;
-    &:hover {
-        color: black;
-    }
-}
-
-.home {
-    cursor: pointer;
-}
+// .profileLink {
+//     font: 400 .9rem 'Figtree',
+//         sans-serif;
+//     text-decoration: none;
+//     color: dimgrey;
+//     &:hover {
+//         color: black;
+//     }
+// }

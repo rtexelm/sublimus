@@ -44,20 +44,22 @@ function LoginFormPage() {
           </ul>
           <br />
           <label>
-            Email
             <input
+              className={styles.text}
               type="email"
               value={email}
+              placeholder="E-Mail"
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </label>
           <br />
           <label>
-            Password
             <input
+              className={styles.text}
               type="password"
               value={password}
+              placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
               required
             />

@@ -1,0 +1,10 @@
+.profileLink {
+    font: 400 .9rem 'Figtree',
+        sans-serif;
+    text-decoration: none;
+    color: dimgrey;
+
+    &:hover {
+        color: black;
+    }
+}
