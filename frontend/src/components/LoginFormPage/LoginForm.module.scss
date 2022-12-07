@@ -17,6 +17,9 @@
         font-size: 1.6rem;
         letter-spacing: .8px;
     }
+    input:focus {
+        outline: none;
+    }
 }
 
 .right {
@@ -31,7 +34,7 @@
     border: 0;
     border-bottom: 2px solid lightgrey;
     width: 100%;
-    padding: 11px 20px 11px 0;
+    padding: 11px 0;
     margin-bottom: 44px;
     font-size: 13px;
 }
@@ -52,12 +55,13 @@
 }
 
 .authLink {
-    display: block;
+    display: inline-block;
+    text-align: center;
     font: 600 13px 'Figtree', sans-serif;
     text-transform: uppercase;
     background-color: white;
     color: black;
     width: 100%;
-    padding: 20px;
+    padding: 20px 0;
     border: 2px solid lightgrey;
 }
