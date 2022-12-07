@@ -35,10 +35,21 @@
     background-color: #b4841e;
     color: white;
     width: 100%;
-    padding: 22px 10px;
+    padding: 20px;
     border: 0;
 }
 
 .question {
     font: 600 13px 'Figtree', sans-serif;
+}
+
+.authLink {
+    display: block;
+    font: 600 13px 'Figtree', sans-serif;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding: 20px;
+    border: 2px solid lightgrey;
 }

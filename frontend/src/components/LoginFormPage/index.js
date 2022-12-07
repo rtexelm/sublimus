@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./LoginForm.module.scss";
 
 function LoginFormPage() {
@@ -83,6 +84,10 @@ function LoginFormPage() {
           Sign up for a My Sublimus account to earn absolutely nothing, track
           fake orders, and receive no announcements.
         </p>
+        <br />
+        <NavLink className={styles.authLink} to="/signup">
+          CREATE AN ACCOUNT
+        </NavLink>
       </div>
       <div className={styles.right}></div>
     </section>

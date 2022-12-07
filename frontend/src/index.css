@@ -5,3 +5,7 @@ body {
     font-family: 'Source Serif Pro', serif;
     font-weight: 300;
 }
+
+a {
+    text-decoration: none;
+}
