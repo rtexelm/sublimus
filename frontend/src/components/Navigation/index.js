@@ -30,10 +30,19 @@ function Navigation() {
       <nav className={styles.navBar}>
         <div className={styles.home}>
           <NavLink className={styles.logoLink} exact to="/">
-            <embed
+            <img
               className={styles.logo}
               src="https://upload.wikimedia.org/wikipedia/commons/5/5d/The_Criterion_Collection_Logo.svg"
+              alt="Criterion Logo"
             />
+          </NavLink>
+        </div>
+        <div className={`${styles.quickLinks}`}>
+          <NavLink className={styles.qLink} to="/login">
+            Sign into Sublimus
+          </NavLink>
+          <NavLink className={styles.qLink} to="/signup">
+            The Create Account Form
           </NavLink>
         </div>
         <ProfileButton className={styles.profileButton} user={sessionUser} />

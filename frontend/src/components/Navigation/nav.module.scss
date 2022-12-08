@@ -1,3 +1,5 @@
+@import "vars.scss";
+
 .navHead {
     // position: fixed;
     // width: 100%;
@@ -21,6 +23,22 @@
         cursor: pointer;
     }
 }
+
+.quickLinks {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    gap: 24px;
+    margin-right: 42px;
+    .qLink {
+    transition: all .2s ease-in;
+        &:hover {
+        color: #b4841e;
+    }
+    }
+}
+
 
 // .profileButton {
 //     cursor: pointer;
