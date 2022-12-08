@@ -1,3 +1,5 @@
+@import "vars.scss";
+
 .content {
     display: flex;
     flex-wrap: wrap;
@@ -41,6 +43,11 @@
     width: 100%;
     padding: 20px;
     border: 0;
+    transition: $buttonTransition;    
+    &:hover {
+        background: black;
+        color: cornsilk;
+    }
 }
 
 .question {
@@ -57,4 +64,10 @@
     width: 100%;
     padding: 20px 0px;
     border: 2px solid lightgrey;
+    transition: $buttonTransition;
+    &:hover {
+        background: black;
+        color: cornsilk;
+        border-color: black;
+    }
 }
