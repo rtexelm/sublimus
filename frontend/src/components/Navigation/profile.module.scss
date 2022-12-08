@@ -1,9 +1,53 @@
-.profileLink {
-    font: 400 .9rem 'Figtree',
-        sans-serif;
-    text-decoration: none;
-    color: dimgrey;
+@keyframes drop {
+    0% {
+        top: -10px;
+        opacity: 0;
+    }
+    
+    100% {
+        top: 16px;
+        opacity: 1;
+    }
+}
 
+.profileDropdown {
+    animation: drop .3s ease-in-out;
+    z-index: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 200px;
+    height: auto;
+    top: 16px;
+    right: 16px;
+    padding: 40px;
+    margin: 0;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+.menuHeader {
+    font: 300 1.4rem 'Source Serif Pro',
+    serif;
+    color: black;
+    margin-top: -10px;
+    &:hover {
+        color: dimgrey;
+    }
+}
+
+.menuItem {
+    font-size: 1rem;
+    padding-top: 12px;
+    color: dimgrey;
+}
+
+.profileLink {
+    font: 600 .8rem 'Figtree',
+        sans-serif;
+    // text-decoration: none;
+    text-transform: uppercase;
+    color: dimgrey;
+    padding-top: 12px;
     &:hover {
         color: black;
     }
@@ -15,6 +59,16 @@
     background-color: transparent;
 }
 
-// .profileDropdown {
-//     position: relative;
-// }
+.logout {
+    cursor: pointer;
+    padding: 12px 0 0 0;
+    border: 0;
+    background-color: transparent;
+    font: 400 .9rem 'Figtree',
+            sans-serif;
+    text-decoration: none;
+    color: dimgrey;
+    &:hover {
+        color: black;
+    }
+}

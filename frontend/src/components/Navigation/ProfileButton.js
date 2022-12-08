@@ -18,6 +18,9 @@ function ProfileButton({ user }) {
 
     const closeMenu = () => {
       setShowMenu(false);
+      // setTimeout(() => {
+      //   setShowMenu(false);
+      // }, 1000);
     };
 
     document.addEventListener("click", closeMenu);
@@ -38,10 +41,16 @@ function ProfileButton({ user }) {
         </button>
         {showMenu && (
           <ul className={styles.profileDropdown}>
-            <li>{user.username}</li>
-            <li>{user.email}</li>
+            <li className={styles.menuHeader}>
+              <NavLink exact to="/">
+                My Sublimus
+              </NavLink>
+            </li>
+            <li className={styles.menuItem}>{user.email}</li>
             <li>
-              <button onClick={logout}>Log Out</button>
+              <button className={styles.logout} onClick={logout}>
+                Log Out
+              </button>
             </li>
           </ul>
         )}
@@ -55,15 +64,14 @@ function ProfileButton({ user }) {
         </button>
         {showMenu && (
           <ul className={styles.profileDropdown}>
-            <li>
-              <NavLink className={styles.profileLink} to="/login">
-                Log In
-              </NavLink>
+            <li className={styles.menuHeader}>
+              <NavLink to="/login">My Sublimus</NavLink>
             </li>
-            <li>
-              <NavLink className={styles.profileLink} to="/signup">
-                Sign Up
-              </NavLink>
+            <li className={styles.profileLink}>
+              <NavLink to="/login">Log In</NavLink>
+            </li>
+            <li className={styles.profileLink}>
+              <NavLink to="/signup">Sign Up</NavLink>
             </li>
           </ul>
         )}
