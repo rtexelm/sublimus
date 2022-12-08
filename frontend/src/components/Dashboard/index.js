@@ -6,7 +6,7 @@ import styles from "./Dashboard.module.scss";
 
 function Dashboard() {
   const sessionUser = useSelector((state) => state.session.user);
-  if (!sessionUser) return <Redirect to="/login" />;
+  if (!sessionUser) return <Redirect to="/" />;
   return (
     <div className={`${styles.page}`}>
       <h1 className={styles.quickHeading}>{sessionUser.email}</h1>

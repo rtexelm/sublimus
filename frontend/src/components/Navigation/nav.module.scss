@@ -1,23 +1,23 @@
 .navHead {
-    // max-width: 800px;
+    // position: fixed;
+    // width: 100%;
     z-index: 1;
-    padding: 32px 24px;
+    padding: 20px 24px;
 }
 
 .navBar {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    // flex-direction: row;
+    // flex-wrap: nowrap;
     justify-content: flex-end;
-    align-items: center;
-    gap: 14px;
+    // align-items: center;
+    // gap: 14px;
 }
 
 .home {
     width: auto;
     margin-right: auto;
     .logoLink {
-        display: block;
         cursor: pointer;
     }
 }

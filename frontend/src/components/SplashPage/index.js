@@ -7,7 +7,12 @@ import styles from "./SplashPage.module.scss";
 function SplashPage() {
   return (
     <main>
-      <article className={styles.filmSplash}></article>
+      <article className={`${styles.splashFeature} ${styles.spotlight}`}>
+        <h1 className={`${styles.announce}`}>Login to test the User Auth</h1>
+        <NavLink className={styles.authLink} to="/login">
+          Login Here
+        </NavLink>
+      </article>
     </main>
   );
 }
