@@ -12,7 +12,7 @@ function LoginFormPage() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
 
-  if (sessionUser) return <Redirect to="/" />;
+  if (sessionUser) return <Redirect to="/Dashboard" />;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,6 +31,26 @@ function LoginFormPage() {
         else setErrors([res.statusText]);
       }
     );
+  };
+
+  const demoLogin = (e) => {
+    setErrors([]);
+    // setEmail("demo@user.io");
+    // setPassword("password");
+    return dispatch(
+      sessionActions.login({ email: "demo@user.io", password: "password" })
+    ).catch(async (res) => {
+      let data;
+      try {
+        // .clone() essentially allows you to read the response body twice
+        data = await res.clone().json();
+      } catch {
+        data = await res.text(); // Will hit this case if the server is down
+      }
+      if (data?.errors) setErrors(data.errors);
+      else if (data) setErrors([data]);
+      else setErrors([res.statusText]);
+    });
   };
 
   return (
@@ -77,6 +97,10 @@ function LoginFormPage() {
           <br />
           <button className={styles.submit} type="submit">
             Log In
+          </button>
+          <br />
+          <button className={styles.submit} onClick={demoLogin}>
+            Log In as Demo User
           </button>
         </form>
         <p className={styles.question}>DON'T HAVE AN ACCOUNT?</p>

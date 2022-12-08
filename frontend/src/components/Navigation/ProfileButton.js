@@ -42,9 +42,7 @@ function ProfileButton({ user }) {
         {showMenu && (
           <ul className={styles.profileDropdown}>
             <li className={styles.menuHeader}>
-              <NavLink exact to="/">
-                My Sublimus
-              </NavLink>
+              <NavLink to="/Dashboard">My Sublimus</NavLink>
             </li>
             <li className={styles.menuItem}>{user.email}</li>
             <li>
