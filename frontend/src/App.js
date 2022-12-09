@@ -5,6 +5,8 @@ import SignupFormPage from "./components/SignupFormPage";
 import Navigation from "./components/Navigation";
 import Dashboard from "./components/Dashboard";
 import SplashPage from "./components/SplashPage";
+import FilmIndexPage from "./components/FilmIndexPage";
+import FilmShowPage from "./components/FilmShowPage";
 
 function App() {
   return (
@@ -13,6 +15,12 @@ function App() {
       <Switch>
         <Route path="/dashboard">
           <Dashboard />
+        </Route>
+        <Route path="/films">
+          <FilmIndexPage />
+        </Route>
+        <Route path="/films/:filmId">
+          <FilmShowPage />
         </Route>
         <Route path="/login">
           <LoginFormPage />

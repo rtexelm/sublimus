@@ -38,8 +38,8 @@ function Navigation() {
           </NavLink>
         </div>
         <div className={`${styles.quickLinks}`}>
-          <NavLink className={styles.qLink} to="/login">
-            Sign into Sublimus
+          <NavLink className={styles.qLink} to="/films">
+            Browse the Selections
           </NavLink>
           <NavLink className={styles.qLink} to="/signup">
             The Create Account Form
