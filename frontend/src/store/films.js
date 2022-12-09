@@ -13,11 +13,10 @@ export const receiveFilm = (film) => ({
   payload: film,
 });
 
-export const getFilms = (state) =>
-  state.films ? Object.values(state.films) : [];
+export const getFilms = (state) => Object.values(state.films);
 
 export const getFilm = (filmId) => (state) =>
-  state.films ? state.films[filmId] : {};
+  state.films[filmId] ? state.films[filmId] : {};
 
 export const fetchFilms = () => async (dispatch) => {
   const res = await csrfFetch(`/api/films`);
@@ -34,14 +33,14 @@ export const fetchFilm = (filmId) => async (dispatch) => {
 };
 
 function filmsReducer(state = {}, action) {
-  newState = { ...state };
+  const newState = { ...state };
 
   switch (action.type) {
     case RECEIVE_FILMS:
       return { ...newState, ...action.payload };
     case RECEIVE_FILM:
       const film = action.payload;
-      return (newState[film.id] = film);
+      return { ...newState, [film.id]: film };
     default:
       return state;
   }

@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import "film.module.scss";
 import { useParams } from "react-router-dom";
 import { fetchFilm, getFilm } from "../../store/films";
+import styles from "./film.module.scss";
 
 function FilmShowPage() {
   const dispatch = useDispatch();
   const { filmId } = useParams();
-  film = useSelector(getFilm(filmId));
+  const film = useSelector(getFilm(filmId));
 
   useEffect(() => {
     dispatch(fetchFilm(filmId));
-  }, [filmId]);
+  }, [filmId, dispatch]);
+
+  console.log(film);
 
   return (
     <>

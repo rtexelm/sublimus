@@ -58,7 +58,7 @@ function ProfileButton({ user }) {
     return (
       <>
         <button className={styles.button} onClick={openMenu}>
-          <i class="fa-regular fa-user fa-xl"></i>
+          <i className="fa-regular fa-user fa-xl"></i>
         </button>
         {showMenu && (
           <ul className={styles.profileDropdown}>

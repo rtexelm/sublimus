@@ -16,7 +16,7 @@ function App() {
         <Route path="/dashboard">
           <Dashboard />
         </Route>
-        <Route path="/films">
+        <Route exact path="/films">
           <FilmIndexPage />
         </Route>
         <Route path="/films/:filmId">
