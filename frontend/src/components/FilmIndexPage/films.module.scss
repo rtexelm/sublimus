@@ -1,3 +1,24 @@
+@import "vars.scss";
+
+.content {
+    // margin-left: 48px;
+}
+
+.shopHeader {
+    padding: 160px 0 40px;
+    background: #f6f6f6;
+    .headerText {
+        padding: 0 48px;
+        h1 {
+            letter-spacing: .1rem;
+            text-transform: uppercase;
+            font: $sansH1;
+        }
+        
+    }
+
+}
+
 h2 {
     font-size: 18px;
 }

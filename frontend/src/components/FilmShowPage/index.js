@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { fetchFilm, getFilm } from "../../store/films";
 import styles from "./film.module.scss";
 
@@ -13,8 +13,6 @@ function FilmShowPage() {
     dispatch(fetchFilm(filmId));
   }, [filmId, dispatch]);
 
-  console.log(film);
-
   return (
     <>
       <h2>{film.title}</h2>
@@ -22,6 +20,7 @@ function FilmShowPage() {
       <p>{film.director}</p>
       <p>{film.description}</p>
       <p>{film.price}</p>
+      <Link to="/films">Return to Films</Link>
     </>
   );
 }

@@ -18,7 +18,22 @@ function FilmIndexPage() {
     return <FilmIndexItem key={film.id} film={film} />;
   });
 
-  return <>{filmItems}</>;
+  return (
+    <>
+      <main className={`${styles.content}`}>
+        <header className={`${styles.shopHeader}`}>
+          <div className={`${styles.headerText}`}>
+            <h1>SHOP ALL Films</h1>
+            <p>
+              Browse our collection of the greatest films from around the world,
+              available on disc, not streaming.
+            </p>
+          </div>
+        </header>
+        {filmItems}
+      </main>
+    </>
+  );
 }
 
 export default FilmIndexPage;
