@@ -9,7 +9,7 @@ function Navigation() {
   const sessionUser = useSelector((state) => state.session.user);
 
   const splash =
-    location.pathname === "/" ? styles.navHeadSplash : styles.navHead;
+    location.pathname == "/" ? styles.navHeadSplash : styles.navHead;
 
   console.log(location.pathname);
 
