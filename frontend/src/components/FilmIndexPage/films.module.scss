@@ -25,6 +25,7 @@
 .shopTable {
     position: relative;
     z-index: 2;
+    width: 100%;
     border-top: 2px solid lightgrey;
     margin-bottom: 48px;
     border-collapse: collapse;
@@ -37,8 +38,35 @@
             padding: 18px 3px;
         }
     }
+    tbody {
+        font: $sansTable;
+        color: #8e8e8e;
+        tr {
+            border-bottom: 2px solid lightgrey;
+            cursor: pointer;
+        }
+        td {
+            vertical-align: middle;
+        }
+    }
 }
 
 .tableTitle {
     font: $sansLink;
+    color: black
+}
+
+.tableSpine {
+    font: $sansTable;
+    color: black;
+}
+
+.tableImg {
+    height: 64px;
+    width: 48px;
+}
+
+.tableDirector {
+    font: 300 italic 13px $sans;
+    // color: #8e8e8e;
 }

@@ -5,6 +5,7 @@ $sansH1: 700 2.5rem 'Figtree', sans-serif;
 $spacingH1: .1rem;
 $sansH3: 600 1.1rem 'Figtree', sans-serif;
 $sansLink: 600 13px 'Figtree',sans-serif;
+$sansTable: 300 13px $sans;
 
 @mixin linkButtonFull {
     display: inline-block;

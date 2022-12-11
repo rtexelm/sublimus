@@ -21,6 +21,10 @@ a:visited {
     color: inherit;
 }
 
+h2 {
+    font-size: 18px;
+}
+
 .errors {
     color: red;
 }
