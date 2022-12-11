@@ -1,11 +1,12 @@
 @import "vars.scss";
 
 .content {
+    // background-color: yellow;
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-right: 5.20833%;
-    margin-left: 48px;
+    flex-wrap: nowrap;
+    gap: 48px;
+    // width: 100%;
+    margin-bottom: 25px;
     p {
         margin-bottom: 20px;
     }
@@ -16,6 +17,14 @@
     input:focus {
         outline: none;
     }
+}
+
+.signupForm {
+    // margin-right: ;
+    margin-left: 48px;
+    // background-color: pink;
+    width: 50%;
+    min-width: 600px;
 }
 
 .text {
@@ -60,10 +69,17 @@
     width: 100%;
     padding: 20px 0px;
     border: 2px solid lightgrey;
+    box-sizing: border-box;
     transition: $buttonTransition;
     &:hover {
         background: black;
         color: cornsilk;
         border-color: black;
     }
+}
+
+.right {
+    background: #f6f6f6;
+    // width: auto;
+    flex-grow: 1;
 }

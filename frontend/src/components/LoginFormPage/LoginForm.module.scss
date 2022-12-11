@@ -4,6 +4,7 @@
     margin-bottom: 25px;
     display: flex;
     flex-wrap: nowrap;
+    gap: 48px;
     p {
         margin-bottom: 20px;
     }
@@ -12,8 +13,9 @@
     }
 }
 .loginForm {
-    margin-right: 5.20833%;
     margin-left: 48px;
+    width: 50%;
+    min-width: 600px;
     input:focus {
         outline: none;
     }
@@ -21,8 +23,7 @@
 
 .right {
     background: #f6f6f6;
-    width: auto;
-    min-width: 39%;
+    flex-grow: 1;
 }
 
 .text {

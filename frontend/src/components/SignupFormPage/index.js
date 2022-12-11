@@ -102,6 +102,7 @@ function SignupFormPage() {
           Sign In To Your account
         </NavLink>
       </div>
+      <div className={`${styles.right}`}></div>
     </div>
   );
 }
