@@ -11,7 +11,7 @@ function FilmIndexPage() {
 
   useEffect(() => {
     dispatch(fetchFilms());
-  }, []);
+  }, [dispatch]);
 
   const filmItems = films.map((film) => {
     // debugger;

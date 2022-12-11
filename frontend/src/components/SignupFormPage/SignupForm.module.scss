@@ -11,11 +11,7 @@
     }
 
     header {
-        margin-bottom: 32px;
-        font-family: 'Figtree', sans-serif;
-        font-weight: 600;
-        font-size: 1.6rem;
-        letter-spacing: .8px;
+        @include authHeading;
     }
     input:focus {
         outline: none;

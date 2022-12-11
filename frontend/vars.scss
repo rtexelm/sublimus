@@ -4,13 +4,65 @@ $serif: 'Source Serif Pro',serif;
 $sansH1: 700 2.5rem 'Figtree', sans-serif;
 $spacingH1: .1rem;
 $sansH3: 600 1.1rem 'Figtree', sans-serif;
+$sansLink: 600 13px 'Figtree',sans-serif;
 
-@mixin linkButton {
-    
+@mixin linkButtonFull {
+    display: inline-block;
+    text-align: center;
+    font: $sansLink;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding: 20px 0;
+    border: 2px solid lightgrey;
+    transition: $buttonTransition;
+
+    &:hover {
+        background: black;
+        color: cornsilk;
+        border-color: black;
+    }
 }
 
-@mixin pagePosition {
+@mixin authSubmit {
+    font: $sansLink;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    background-color: #b4841e;
+    color: white;
+    width: 100%;
+    padding: 20px;
+    border: 0;
+    transition: $buttonTransition;
+
+    &:hover {
+        background: black;
+        color: cornsilk;
+    }
+}
+
+@mixin Position {
+    padding: 0 48px;
 
 }
 
-// @mixin 
+@mixin authInputText {
+    font: 600 13px $sans;
+    border: 0;
+    border-bottom: 2px solid lightgrey;
+    width: 100%;
+    padding: 11px 0;
+    margin-bottom: 44px;
+}
+
+@mixin authHeading {
+    font: 600 1.6rem $sans;
+    margin-bottom: 32px;
+    letter-spacing: .8px;
+}
+
+@mixin storeHeading {
+
+}

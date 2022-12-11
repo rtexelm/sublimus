@@ -8,11 +8,7 @@
         margin-bottom: 20px;
     }
     header {
-        margin-bottom: 32px;
-        font-family: 'Figtree', sans-serif;
-        font-weight: 600;
-        font-size: 1.6rem;
-        letter-spacing: .8px;
+        @include authHeading;
     }
 }
 .loginForm {
@@ -26,56 +22,22 @@
 .right {
     background: #f6f6f6;
     width: auto;
-    min-width: 39.32292%;
+    min-width: 39%;
 }
 
 .text {
-    font: 600 13px 'Figtree', sans-serif;
-    // background-color: lightblue;
-    border: 0;
-    border-bottom: 2px solid lightgrey;
-    width: 100%;
-    padding: 11px 0;
-    margin-bottom: 44px;
-    font-size: 13px;
+    @include authInputText;
 }
 
 .submit {
-    font: 600 13px 'Figtree', sans-serif;
-    cursor: pointer;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    background-color: #b4841e;
-    color: white;
-    width: 100%;
-    padding: 20px;
-    border: 0;
-    transition: $buttonTransition;
-    &:hover {
-        background: black;
-        color: cornsilk;
-    }
+    @include authSubmit;
 }
 
 .question {
-    font: 600 13px 'Figtree', sans-serif;
+    font: $sansLink;
 }
 
 .authLink {
-    display: inline-block;
-    text-align: center;
-    font: 600 13px 'Figtree', sans-serif;
-    text-transform: uppercase;
-    background-color: white;
-    color: black;
-    width: 100%;
-    padding: 20px 0;
-    border: 2px solid lightgrey;
-    transition: $buttonTransition;
-    &:hover {
-        background: black;
-        color: cornsilk;
-        border-color: black;
-    }
+    @include linkButtonFull;
 }
 
