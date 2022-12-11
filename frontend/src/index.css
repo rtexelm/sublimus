@@ -38,6 +38,7 @@ h2 {
 }
 
 .shopPadded {
-    padding: 0 48px 64px;
+    padding: 0 54px 64px;
+    overflow-x: auto;
 }
 

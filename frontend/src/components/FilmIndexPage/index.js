@@ -7,14 +7,12 @@ import styles from "./films.module.scss";
 function FilmIndexPage() {
   const dispatch = useDispatch();
   const films = useSelector(getFilms);
-  // debugger;
 
   useEffect(() => {
     dispatch(fetchFilms());
   }, [dispatch]);
 
   const filmItems = films.map((film) => {
-    // debugger;
     return <FilmIndexItem key={film.id} film={film} />;
   });
 

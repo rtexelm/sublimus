@@ -32,10 +32,12 @@
     border-spacing: 0;
     padding: 0;
     thead {
+        font: 400 .93rem $serif;
+        color: rgb(26, 26, 26);
         border-bottom: 2px solid black;
         th {
             text-align: left;
-            padding: 18px 3px;
+            padding: 28px 12px;
         }
     }
     tbody {
@@ -46,6 +48,7 @@
             cursor: pointer;
         }
         td {
+            padding: 12px 8px;
             vertical-align: middle;
         }
     }
@@ -57,13 +60,16 @@
 }
 
 .tableSpine {
-    font: $sansTable;
     color: black;
 }
 
 .tableImg {
-    height: 64px;
-    width: 48px;
+    img{
+        max-height: auto;
+        max-width: 48px;
+        // display: block;
+
+    }
 }
 
 .tableDirector {
