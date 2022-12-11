@@ -20,7 +20,9 @@ function FilmShowPage() {
       <p>{film.director}</p>
       <p>{film.description}</p>
       <p>{film.price}</p>
-      <Link to="/films">Return to Films</Link>
+      <Link to="/films">
+        <b>Return to Films</b>
+      </Link>
     </>
   );
 }

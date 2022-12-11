@@ -1,14 +1,21 @@
 @import "vars.scss";
 
 .navHead {
-    // position: fixed;
-    // width: 100%;
     z-index: 1;
     padding: 20px 24px;
 }
 
+.navHeadSplash {
+    position: fixed;
+    width: 96.6%;
+    z-index: 1;
+    padding: 20px 24px;
+    // background-color: transparent;
+}
+
 .navBar {
     display: flex;
+    // width: 95%;
     // flex-direction: row;
     // flex-wrap: nowrap;
     justify-content: flex-end;
@@ -17,7 +24,7 @@
 }
 
 .home {
-    width: auto;
+    // flex-grow: 3;
     margin-right: auto;
     .logoLink {
         cursor: pointer;
@@ -27,8 +34,8 @@
 .quickLinks {
     display: flex;
     align-items: center;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 300;
+    font-size: 20px;
     gap: 24px;
     margin-right: 42px;
     .qLink {

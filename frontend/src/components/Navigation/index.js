@@ -1,11 +1,17 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ProfileButton from "./ProfileButton";
 import styles from "./nav.module.scss";
 
 function Navigation() {
+  const location = useLocation();
   const sessionUser = useSelector((state) => state.session.user);
+
+  const splash =
+    location.pathname === "/" ? styles.navHeadSplash : styles.navHead;
+
+  console.log(location.pathname);
 
   // let sessionLinks;
   // if (sessionUser) {
@@ -26,8 +32,8 @@ function Navigation() {
   // }
 
   return (
-    <header className={styles.navHead}>
-      <nav className={styles.navBar}>
+    <header className={splash}>
+      <nav className={`${styles.navBar}`}>
         <div className={styles.home}>
           <NavLink className={styles.logoLink} exact to="/">
             <img
