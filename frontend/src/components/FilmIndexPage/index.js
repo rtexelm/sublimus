@@ -20,7 +20,7 @@ function FilmIndexPage() {
 
   return (
     <>
-      <main className={`${styles.content}`}>
+      <main className={`container`}>
         <header className={`${styles.shopHeader}`}>
           <div className={`${styles.headerText}`}>
             <h1>SHOP ALL Films</h1>
@@ -30,7 +30,28 @@ function FilmIndexPage() {
             </p>
           </div>
         </header>
-        {filmItems}
+        <div className={`container centered`}>
+          <section className={`${styles.shopFilters}`}>
+            <b>{filmItems.length}</b> Selections
+          </section>
+        </div>
+        <div className={`container centered`}>
+          <section className={`shopPadded`}>
+            <table className={`${styles.shopTable}`}>
+              <thead>
+                <tr>
+                  <th>Spine #</th>
+                  <th></th>
+                  <th>Title</th>
+                  <th>Director</th>
+                  <th>Year</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>{filmItems}</tbody>
+            </table>
+          </section>
+        </div>
       </main>
     </>
   );

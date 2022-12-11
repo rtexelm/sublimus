@@ -15,6 +15,30 @@
 
 }
 
-h2 {
-    font-size: 18px;
+.shopFilters {
+    font: $sansLink;
+    text-transform: uppercase;
+    color: rgb(190, 188, 188);
+    padding: 44px 48px;
+}
+
+.shopTable {
+    position: relative;
+    z-index: 2;
+    border-top: 2px solid lightgrey;
+    margin-bottom: 48px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding: 0;
+    thead {
+        border-bottom: 2px solid black;
+        th {
+            text-align: left;
+            padding: 18px 3px;
+        }
+    }
+}
+
+.tableTitle {
+    font: $sansLink;
 }

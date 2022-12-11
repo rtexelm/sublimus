@@ -7,6 +7,10 @@ body {
     line-height: 1.6;
 }
 
+b {
+    color: black;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -20,3 +24,16 @@ a:visited {
 .errors {
     color: red;
 }
+
+.container {
+    width: 100%;
+}
+
+.centered {
+    margin: 0 auto;
+}
+
+.shopPadded {
+    padding: 0 48px 64px;
+}
+
