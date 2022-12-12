@@ -1,9 +1,52 @@
 @import "vars.scss";
 
-.shopHeader {
-    padding: 160px 0 40px;
-    h1 {
-        font: $sansH1;
-    }
+.content {
+    display: flex;
+    flex-flow: nowrap;
+    gap: 48px;
 }
 
+.details {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    // margin-right: ;
+    margin-left: 48px;
+    // background-color: pink;
+    width: 60%;
+    min-width: 400px;
+    margin-bottom: 25px;
+}
+
+.right {
+    display: flex;
+    position: relative;
+    flex-flow: column nowrap;
+    flex: 1;
+    background: #f6f6f6;
+}
+
+.showTitle {
+    font: $serifH1;
+}
+
+.showDirector {
+    font: $sansLink;
+
+    font-size: .9rem;
+    color: #B4841E;
+}
+
+.showImg {
+    max-width: 100%;
+    flex: 2;
+    object-fit: contain;
+}
+
+.showReturn {
+    font: $sansH3;
+}
+
+.showPlaceholder {
+    @include placeholder;
+}

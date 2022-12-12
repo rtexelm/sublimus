@@ -15,14 +15,35 @@ function FilmShowPage() {
 
   return (
     <>
-      <h2>{film.title}</h2>
-      <p>{film.year}</p>
-      <p>{film.director}</p>
-      <p>{film.description}</p>
-      <p>{film.price}</p>
-      <Link to="/films">
-        <b>Return to Films</b>
-      </Link>
+      <div className={`container centered`}>
+        {/* <div className=`}> */}
+        <section className={`${styles.content}`}>
+          <article className={`${styles.details}`}>
+            <p className={`${styles.showPlaceholder}`}>
+              <span className={`${styles.showDirector}`}>{film.director}</span>
+              <h1 className={`${styles.showTitle}`}>{film.title}</h1>
+            </p>
+            <p className={`${styles.showPlaceholder}`}>{film.description}</p>
+            <p className={`${styles.showPlaceholder}`}>{film.year}</p>
+            <p className={`${styles.showPlaceholder}`}></p>
+            <p className={`${styles.showPlaceholder}`}></p>
+            <Link className={`${styles.showReturn}`} to="/films">
+              <b>Return to Films</b>
+            </Link>
+          </article>
+          <article className={`${styles.right}`}>
+            <img
+              className={`${styles.showImg}`}
+              src="https://s3.amazonaws.com/criterion-production/films/b41a9467bc7a3534c01ba037c019005c/L5fZBJQOnY606k47INf8z9f5ecBFn3_large.jpg"
+            />
+            <div className={`${styles.showPlaceholder}`}>
+              MSRP: ${film.price}
+            </div>
+            <div className={`${styles.showPlaceholder}`}></div>
+            <div className={`${styles.showPlaceholder}`}></div>
+          </article>
+        </section>
+      </div>
     </>
   );
 }
