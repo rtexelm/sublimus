@@ -8,7 +8,7 @@ class ApplicationController < ActionController::API
 
   protect_from_forgery with: :exception
 
-  before_action :snake_case_params, :attach_authenticity_token, :current_cart
+  before_action :snake_case_params, :attach_authenticity_token
 
 
   def current_user 
@@ -55,17 +55,6 @@ class ApplicationController < ActionController::API
   def invalid_authenticity_token
     render json: { message: 'Invalid authenticity token' }, 
       status: :unprocessable_entity
-  end
-
-  def current_cart
-    if logged_in?
-      @current_cart = @current_user.cart
-    elsif session[:cart_id]
-      @current_cart = Cart.find(session[:cart_id])
-    else
-      @current_cart = Cart.create!
-      session[:cart_id] = @cart.id
-    end
   end
 
   def unhandled_error(error)

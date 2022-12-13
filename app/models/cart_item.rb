@@ -12,10 +12,10 @@
 class CartItem < ApplicationRecord
   
   belongs_to :film
-  belongs_to :cart
+  belongs_to :user
 
-  validates :cart_id, presence: true
-  validates :film_id, presence: true, uniqueness: {scope: :cart_id}
+  validates :user_id, presence: true
+  validates :film_id, presence: true, uniqueness: {scope: :user_id}
   validates :quantity, numericality: {greater_than_or_equal_to: 0}, presence: true
-  # validates :user_id, presence: true
+
 end
