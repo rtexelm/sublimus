@@ -15,6 +15,16 @@ class ApplicationController < ActionController::API
       @current_user ||= User.find_by(session_token: session[:session_token])
   end
 
+  def current_cart
+    if logged_in?
+      @cart = @current_user.cart
+    elsif session[:cart]
+      @cart = Cart.find(session[:cart])
+    else
+      @cart = reset_cart!
+    end
+  end
+
   def require_logged_in
       if !logged_in?
           render json: { errors: ['Must be logged in'] }, status: :unauthorized

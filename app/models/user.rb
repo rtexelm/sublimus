@@ -24,6 +24,9 @@ class User < ApplicationRecord
 
   validates :password, length: { in: 6..255 }, allow_nil: true
 
+  has_one :cart, dependent: :destroy
+  
+  
   def self.find_by_credentials(email, password)
       user = User.find_by(email: email)
       # has_secure_password gives us the authenticate method

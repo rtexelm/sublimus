@@ -35,6 +35,7 @@ function FilmShowPage() {
             <img
               className={`${styles.showImg}`}
               src="https://s3.amazonaws.com/criterion-production/films/b41a9467bc7a3534c01ba037c019005c/L5fZBJQOnY606k47INf8z9f5ecBFn3_large.jpg"
+              alt="Placeholder image"
             />
             <div className={`${styles.showPlaceholder}`}>
               MSRP: ${film.price}
