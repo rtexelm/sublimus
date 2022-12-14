@@ -8,6 +8,7 @@ import styles from "./items.module.scss";
 function CartPage() {
   const dispatch = useDispatch();
   const items = useSelector(getItems);
+  console.log(items);
 
   useEffect(() => {
     dispatch(fetchItems());
@@ -19,7 +20,10 @@ function CartPage() {
 
   return (
     <>
-      {cartItems}
+      {/* { if (items.errors) {
+        items.errors.map
+      } }
+      {cartItems} */}
       <Link to={`films`}>Find More Films</Link>
     </>
   );

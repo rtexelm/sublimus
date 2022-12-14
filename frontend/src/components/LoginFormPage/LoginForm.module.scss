@@ -1,7 +1,6 @@
 @import "vars.scss";
 
 .content {
-    margin-bottom: 25px;
     display: flex;
     flex-wrap: nowrap;
     gap: 48px;
@@ -13,8 +12,11 @@
     }
 }
 .loginForm {
-    margin-left: 48px;
-    width: 60%;
+    margin: 200px 48px 25px 96px;
+    // margin-bottom: 25px;
+    // margin-top: 200px;
+    // margin-left: 48px;
+    width: 50%;
     min-width: 600px;
     input:focus {
         outline: none;

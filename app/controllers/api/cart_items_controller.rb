@@ -1,8 +1,17 @@
 class Api::CartItemsController < ApplicationController
   
   def index
-    @items = current_user.cart_items
-    render :index
+    if current_user
+      @items = current_user.cart_items
+      if @items.empty?
+        render json: { errors: ['Your Cart Is Empty']}
+      else 
+        render :index
+      end
+    else
+      render json: {errors: ['Login To View Cart']}
+    end
+
   end
 
   def create
