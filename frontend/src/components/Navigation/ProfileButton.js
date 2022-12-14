@@ -43,7 +43,6 @@ function ProfileButton({ user }) {
             src={userIcon}
             alt="Profile Icon"
           />
-          {/* <i className="fa-regular fa-user fa-xl"></i> */}
         </button>
         {showMenu && (
           <ul className={styles.profileDropdown}>
