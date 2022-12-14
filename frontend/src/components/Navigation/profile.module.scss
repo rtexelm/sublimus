@@ -27,6 +27,7 @@
     margin: 0;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
+
 .menuHeader {
     font: 300 1.4rem 'Source Serif Pro',
     serif;
@@ -59,6 +60,14 @@
     cursor: pointer;
     border: 0;
     background-color: transparent;
+}
+
+.userIcon {
+    width: 24px;
+}
+.cartIcon {
+    width: 28px;
+    // background-color: pink;
 }
 
 .logout {

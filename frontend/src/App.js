@@ -7,6 +7,7 @@ import Dashboard from "./components/Dashboard";
 import SplashPage from "./components/SplashPage";
 import FilmIndexPage from "./components/FilmIndexPage";
 import FilmShowPage from "./components/FilmShowPage";
+import CartPage from "./components/CartPage";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route path="/films/:filmId">
           <FilmShowPage />
+        </Route>
+        <Route path="/cart">
+          <CartPage />
         </Route>
         <Route path="/login">
           <LoginFormPage />

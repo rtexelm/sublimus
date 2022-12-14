@@ -32,7 +32,7 @@ export const fetchItems = () => async (dispatch) => {
   return res;
 };
 
-// export const fetchEvent = (itemId) => async (dispatch) => {
+// export const fetchItem = (itemId) => async (dispatch) => {
 //   const res = await csrfFetch(`/api/cart_items/${itemId}`);
 //   const data = await res.json();
 
@@ -65,15 +65,15 @@ export const updateItem = (item) => async (dispatch) => {
   dispatch(receiveItem(data));
 };
 
-export const deleteEvent = (itemId) => async (dispatch) => {
-  const res = await csrfFetch(`/api/cart_items/${itemId}`, {
+export const deleteItem = (itemId) => async (dispatch) => {
+  await csrfFetch(`/api/cart_items/${itemId}`, {
     method: "DELETE",
   });
 
   dispatch(removeItem(itemId));
 };
 
-function filmsReducer(state = {}, action) {
+function itemsReducer(state = {}, action) {
   const newState = { ...state };
 
   switch (action.type) {
@@ -90,3 +90,5 @@ function filmsReducer(state = {}, action) {
       return state;
   }
 }
+
+export default itemsReducer;

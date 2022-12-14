@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import * as sessionActions from "../../store/session";
 import { NavLink } from "react-router-dom";
+import userIcon from "../../assets/icons8-user-48.png";
 import styles from "./profile.module.scss";
 
 function ProfileButton({ user }) {
@@ -37,7 +38,12 @@ function ProfileButton({ user }) {
     return (
       <>
         <button className={styles.button} onClick={openMenu}>
-          <i class="fa-regular fa-user fa-xl"></i>
+          <img
+            className={`${styles.userIcon}`}
+            src={userIcon}
+            alt="Profile Icon"
+          />
+          {/* <i className="fa-regular fa-user fa-xl"></i> */}
         </button>
         {showMenu && (
           <ul className={styles.profileDropdown}>

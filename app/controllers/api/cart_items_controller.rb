@@ -1,20 +1,20 @@
 class Api::CartItemsController < ApplicationController
   
   def index
-    @items = @current_user.cart_items
+    @items = current_user.cart_items
     render :index
   end
 
   def create
 
-    cart = @current_user.cart_items
+    cart = current_user.cart_items
     film = Film.find(params[:film_id])
 
     if cart.include?(film)
       @item = cart.find_by(film_id: film.id)
       @item.quantity += 1
     else
-      @item = CartItem.new(user_id: @current_user, item_params)
+      @item = CartItem.new(item_params)
     end
 
     if @item.save
@@ -46,7 +46,8 @@ class Api::CartItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:cart_item).permit(:film_id, :quantity)
+    user_id = current_user
+    params.require(:cart_item).permit(user_id, :film_id, :quantity)
   end
 
   # def remove_item?(item, quantity)
