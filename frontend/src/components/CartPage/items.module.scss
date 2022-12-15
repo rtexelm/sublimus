@@ -1,0 +1,7 @@
+@import "vars.scss";
+
+
+.remove {
+    @include authSubmit;
+    cursor: pointer;
+}

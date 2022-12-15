@@ -1,8 +1,9 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import RemoveButton from "./RemoveButton";
 
 function CartItem({ item }) {
-  const { quantity, title, price } = item;
+  const { id, quantity, title, price } = item;
   const history = useHistory();
 
   return (
@@ -10,6 +11,9 @@ function CartItem({ item }) {
       <li>{title}</li>
       <li>{price}</li>
       <li>{quantity}</li>
+      <li>
+        <RemoveButton itemId={id} />
+      </li>
     </ul>
   );
 }

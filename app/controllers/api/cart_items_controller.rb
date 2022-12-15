@@ -4,12 +4,12 @@ class Api::CartItemsController < ApplicationController
     if current_user
       @items = current_user.cart_items
       if @items.empty?
-        render json: { errors: ['Your Cart Is Empty']}
+        render json: { errors: 'Your Cart Is Empty'}
       else 
         render :index
       end
     else
-      render json: {errors: ['Login To View Cart']}
+      render json: {errors: 'Login To View Cart'}
     end
 
   end
@@ -19,9 +19,13 @@ class Api::CartItemsController < ApplicationController
     cart = current_user.cart_items
     film = Film.find(params[:film_id])
 
-    if cart.include?(film)
-      @item = cart.find_by(film_id: film.id)
-      @item.quantity += 1
+    if cart
+      cart.each do |item|
+        if item.film == film
+          @item = CartItem.find_by(film_id: film.id)
+          @item.quantity += 1
+        end
+      end
     else
       @item = CartItem.new(item_params)
     end
@@ -55,8 +59,7 @@ class Api::CartItemsController < ApplicationController
 
   private
   def item_params
-    user_id = current_user
-    params.require(:cart_item).permit(user_id, :film_id, :quantity)
+    params.require(:cart_item).permit(:user_id, :film_id, :quantity)
   end
 
   # def remove_item?(item, quantity)

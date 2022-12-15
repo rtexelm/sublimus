@@ -6,6 +6,11 @@
     gap: 48px;
 }
 
+.button {
+    @include linkButtonFull;
+    cursor: pointer
+}
+
 .details {
     flex: 1;
     display: flex;

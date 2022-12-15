@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { fetchFilm, getFilm } from "../../store/films";
+import AddItemButton from "./AddItemButton";
 import styles from "./film.module.scss";
 
 function FilmShowPage() {
@@ -21,8 +22,8 @@ function FilmShowPage() {
           <article className={`${styles.details}`}>
             <p className={`${styles.showPlaceholder}`}>
               <span className={`${styles.showDirector}`}>{film.director}</span>
-              <h1 className={`${styles.showTitle}`}>{film.title}</h1>
             </p>
+            <h1 className={`${styles.showTitle}`}>{film.title}</h1>
             <p className={`${styles.showPlaceholder}`}>{film.description}</p>
             <p className={`${styles.showPlaceholder}`}>{film.year}</p>
             <p className={`${styles.showPlaceholder}`}></p>
@@ -40,7 +41,9 @@ function FilmShowPage() {
             <div className={`${styles.showPlaceholder}`}>
               MSRP: ${film.price}
             </div>
-            <div className={`${styles.showPlaceholder}`}></div>
+            <div className={`${styles.showPlaceholder}`}>
+              <AddItemButton film={film} />
+            </div>
             <div className={`${styles.showPlaceholder}`}></div>
           </article>
         </section>

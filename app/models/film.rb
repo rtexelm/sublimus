@@ -16,6 +16,8 @@ class Film < ApplicationRecord
   validates :title, :description, :director, presence: true
   validates :year, inclusion: { in: 1850..2024, message: 'Must be within years of film existence' }, presence: true
   validates :price, numericality: {  greater_than: 0, message: 'Cannot be free or less' }, presence: true
+
+  has_many :cart_items
   
   
 end
