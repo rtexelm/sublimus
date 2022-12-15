@@ -18,7 +18,7 @@ function CartPage() {
     dispatch(fetchItems());
   }, [dispatch]);
 
-  console.log(items);
+  // console.log(items);
   // console.log(message);
 
   const cartItems = items.map((item) => {
@@ -26,16 +26,23 @@ function CartPage() {
   });
 
   return (
-    <>
+    <div>
       {message ? (
         <p className={`${styles.cartMessage}`}>{message}</p>
       ) : (
-        cartItems
+        <div>
+          {cartItems}
+          <Link to={`checkout`}>
+            <b>Proceed to Checkout</b>
+          </Link>
+        </div>
       )}
+
+      <br />
       <Link to={`films`}>
         <b>Find More Films</b>
       </Link>
-    </>
+    </div>
   );
 }
 
