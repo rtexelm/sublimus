@@ -12,7 +12,7 @@ function Navigation() {
   const splash =
     location.pathname === "/" ? styles.navHeadSplash : styles.navHead;
 
-  console.log(location.pathname);
+  // console.log(location.pathname);
 
   // let sessionLinks;
   // if (sessionUser) {

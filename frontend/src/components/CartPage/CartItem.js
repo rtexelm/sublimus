@@ -4,7 +4,7 @@ import RemoveButton from "./RemoveButton";
 
 function CartItem({ item }) {
   const { id, quantity, title, price } = item;
-  const history = useHistory();
+  // const history = useHistory();
 
   return (
     <ul>

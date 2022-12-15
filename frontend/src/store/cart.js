@@ -20,6 +20,7 @@ export const removeItem = (itemId) => ({
 });
 
 export const getItems = (state) => Object.values(state.items);
+// state.items ? Object.values(state.items) : [];
 
 export const getItem = (itemId) => (state) =>
   state.items[itemId] ? state.items[itemId] : {};
@@ -27,11 +28,8 @@ export const getItem = (itemId) => (state) =>
 export const fetchItems = () => async (dispatch) => {
   const res = await csrfFetch(`/api/cart_items/`);
   const data = await res.json();
-
-  if (data?.errors) dispatch(receiveItems(data));
-
   dispatch(receiveItems(data));
-  return res;
+  // return res;
 };
 
 // export const fetchItem = (itemId) => async (dispatch) => {
