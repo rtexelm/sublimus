@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import thumbs from "./thumbUrls";
 import styles from "./films.module.scss";
 
 function FilmIndexItem({ film }) {
   const { id, title, director, year, price } = film;
   const history = useHistory();
+  const thumbUrl = thumbs[film.id];
 
   return (
     <tr onClick={(e) => history.push(`films/${film.id}`)}>
       <td className={`${styles.tableSpine}`}>{id}</td>
       <td className={`${styles.tableImg}`}>
-        <img
-          src="https://s3.amazonaws.com/criterion-production/films/b41a9467bc7a3534c01ba037c019005c/L5fZBJQOnY606k47INf8z9f5ecBFn3_thumbnail.jpg"
-          alt="Grand Illusion"
-        />
+        <img src={thumbUrl} alt="" />
       </td>
       <td className={`${styles.tableTitle}`}>{title}</td>
       <td className={`${styles.tableDirector}`}>{director}</td>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { fetchFilm, getFilm } from "../../store/films";
-import * as images from "./imgUrls";
+import { images } from "./imgUrls";
 import AddItemButton from "./AddItemButton";
 import styles from "./film.module.scss";
 
@@ -10,10 +10,13 @@ function FilmShowPage() {
   const dispatch = useDispatch();
   const { filmId } = useParams();
   const film = useSelector(getFilm(filmId));
+  const imgUrl = images[filmId];
 
   useEffect(() => {
     dispatch(fetchFilm(filmId));
   }, [filmId, dispatch]);
+
+  // console.log(imgUrl);
 
   return (
     <>
@@ -34,11 +37,7 @@ function FilmShowPage() {
             </Link>
           </article>
           <article className={`${styles.right}`}>
-            <img
-              className={`${styles.showImg}`}
-              src="https://s3.amazonaws.com/criterion-production/films/b41a9467bc7a3534c01ba037c019005c/L5fZBJQOnY606k47INf8z9f5ecBFn3_large.jpg"
-              alt="Placeholder image"
-            />
+            <img className={`${styles.showImg}`} src={imgUrl} alt="" />
             <div className={`${styles.showPlaceholder}`}>
               MSRP: ${film.price}
             </div>
