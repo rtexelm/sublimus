@@ -3,36 +3,79 @@
 .content {
     display: flex;
     flex-flow: nowrap;
-    gap: 48px;
+    gap: 5%;
+}
+
+.cartButton {
+    @include linkButtonPrimary;
 }
 
 .button {
     @include linkButtonFull;
+    border-color: #B4841E;
     cursor: pointer
 }
 
+.headerBox {
+    padding-bottom: 80px;
+}
+
 .details {
-    flex: 1;
+    flex: 5 0 0;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: flex-start;
     // margin-right: ;
+    margin-top: 48px;
     margin-left: 48px;
     // background-color: pink;
     width: 60%;
     min-width: 400px;
     margin-bottom: 25px;
+    .description {
+        flex: 1 1 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        // gap: 24px;
+        padding: 24px 0 48px; 
+        .info {
+            font: $sansLink;
+            color: lightgrey;
+            width: 200px;
+            flex: 1 1 0;
+            .infoHeader {
+                text-transform: uppercase;
+                padding-top: 10px;
+                padding-bottom: 24px;
+            }
+        }
+        .story {
+            flex: 5 1 0;
+            ul{
+                list-style: disc;
+                font: $sansTable;
+            }
+            li {
+                padding: 18px 0;
+            }
+        }
+    }
 }
 
 .right {
     display: flex;
     position: relative;
     flex-flow: column nowrap;
-    flex: 1;
+    // justify-content: flex-start;
+    flex: 4 0 0;
     background: #f6f6f6;
 }
 
 .showTitle {
+    padding-top: 16px;
     font: $serifH1;
+    text-align: left;
 }
 
 .showDirector {
@@ -45,7 +88,6 @@
 .showImg {
     margin: 24px 24px 0 0;
     max-width: 100%;
-    flex: 2;
     object-fit: contain;
 }
 
@@ -55,4 +97,10 @@
 
 .showPlaceholder {
     @include placeholder;
+}
+
+.features {
+    padding: 56px 0 24px;
+    font: $sansH3;
+    text-transform: uppercase;
 }

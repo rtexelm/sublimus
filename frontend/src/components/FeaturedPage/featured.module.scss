@@ -1,0 +1,53 @@
+@import "vars.scss";
+
+.fullPage {
+    background-color: #f6f6f6;
+    min-height: 100vh;
+    h1 {
+        font: $serifH1;
+        font-size: 5rem;
+        text-align: center;
+        margin: 0 48px;
+        padding: 128px 0px;
+    }
+}
+
+
+.featuredBoxes {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2px;
+    // width: 
+    margin: 0 48px;
+    .featuredBox {
+        cursor: pointer;
+        background: white;
+        // border: 1px solid blue;
+        flex: 1 1 ;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 32px;
+        transition: all .25s ease-in-out;;
+        &:hover {
+            background: #f0f0ef;
+        }
+        img {
+            width: 75%;
+            max-width: 240px;
+            height: auto;
+        }
+        h3 {
+            font: $sansH3;
+            color: #b4841e;
+            text-transform: uppercase;
+            padding-bottom: 24px;
+        }
+        p {
+            text-align: center;
+            padding-top: 24px;
+            font: 300 italic 13px $serif;
+            color: gray;
+        }
+    }   
+}

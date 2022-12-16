@@ -8,10 +8,9 @@ function SplashPage() {
   return (
     <main>
       <article className={`${styles.splashFeature} ${styles.spotlight}`}>
-        {/* <h1 className={`${styles.announce}`}>Holiday Sale</h1> */}
         <img
           src="https://s3.amazonaws.com/criterion-production/spotlight_images/4245-aa50a5f37415a5b31d01577f73327950/I7ltCM01T3eYLeC94Ag5Gd1zTTgcNP_w700.png"
-          alt="Film screen cap"
+          alt=""
         />
         <p className={`${styles.announce}`}>
           A sale might be happening but you'll never know, will you?

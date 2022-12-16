@@ -14,7 +14,7 @@ function AddItemButton({ film }) {
   };
 
   return (
-    <h1 className={`${styles.button}`} onClick={handleAddItem}>
+    <h1 className={`${styles.cartButton}`} onClick={handleAddItem}>
       Add To Cart
     </h1>
   );

@@ -9,6 +9,7 @@ import FilmIndexPage from "./components/FilmIndexPage";
 import FilmShowPage from "./components/FilmShowPage";
 import CartPage from "./components/CartPage";
 import CheckoutPage from "./components/CheckoutPage";
+import FeaturedPage from "./components/FeaturedPage";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
       <Switch>
         <Route path="/dashboard">
           <Dashboard />
+        </Route>
+        <Route path="/featured">
+          <FeaturedPage />
         </Route>
         <Route exact path="/films">
           <FilmIndexPage />

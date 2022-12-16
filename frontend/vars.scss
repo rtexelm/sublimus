@@ -4,9 +4,9 @@ $serif: 'Source Serif Pro',serif;
 $sansH1: 700 2.5rem 'Figtree', sans-serif;
 $serifH1: 400 2.9rem $serif;
 $spacingH1: .1rem;
-$sansH3: 600 1.1rem 'Figtree', sans-serif;
+$sansH3: 600 .9rem $sans;
 $serifH3: 600 1.8 $serif;
-$sansLink: 600 13px 'Figtree',sans-serif;
+$sansLink: 600 13px $sans;
 $sansTable: 300 13px $sans;
 
 @mixin linkButtonFull {
@@ -19,6 +19,27 @@ $sansTable: 300 13px $sans;
     width: 100%;
     padding: 20px 0;
     border: 2px solid lightgrey;
+    transition: $buttonTransition;
+    cursor: pointer;
+
+    &:hover {
+        background: black;
+        color: cornsilk;
+        border-color: black;
+    }
+}
+
+@mixin linkButtonPrimary {
+    display: inline-block;
+    text-align: center;
+    font: $sansLink;
+    text-transform: uppercase;
+    background-color: #b4841e;
+    color: white;
+    width: 100%;
+    padding: 20px 0;
+    border: 2px solid #b4841e;
+    cursor: pointer;
     transition: $buttonTransition;
 
     &:hover {
@@ -67,6 +88,6 @@ $sansTable: 300 13px $sans;
 }
 
 @mixin placeholder {
-    flex: 1;
+    flex: 1 1 none;
     padding: 40px 40px 48px; 
 }

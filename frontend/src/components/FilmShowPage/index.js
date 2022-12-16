@@ -24,13 +24,46 @@ function FilmShowPage() {
         {/* <div className=`}> */}
         <section className={`${styles.content}`}>
           <article className={`${styles.details}`}>
-            <p className={`${styles.showPlaceholder}`}>
-              <span className={`${styles.showDirector}`}>{film.director}</span>
-            </p>
-            <h1 className={`${styles.showTitle}`}>{film.title}</h1>
-            <p className={`${styles.showPlaceholder}`}>{film.description}</p>
-            <p className={`${styles.showPlaceholder}`}>{film.year}</p>
-            <p className={`${styles.showPlaceholder}`}></p>
+            <div className={`${styles.headerBox}`}>
+              <p className={`${styles.showDirector}`}>{film.director}</p>
+              <h1 className={`${styles.showTitle}`}>{film.title}</h1>
+            </div>
+            <div className={`${styles.description}`}>
+              <div className={`${styles.info}`}>
+                <p className={`${styles.infoHeader}`}>Film Info</p>
+                <ul>
+                  <li>{film.year}</li>
+                  <li>Cypress</li>
+                  <li>124 minutes</li>
+                  <li>color</li>
+                  <li>1.85:1</li>
+                  <li>Italian</li>
+                  <li>
+                    <b>Spine #{film.id}</b>
+                  </li>
+                </ul>
+              </div>
+              <div className={`${styles.story}`}>
+                <p>{film.description}</p>
+                <p className={`${styles.features}`}>Special Features</p>
+                <ul>
+                  <li>
+                    Restored high-definition digital transfer, with uncompressed
+                    monaural soundtrack on the Blu-ray edition
+                  </li>
+                  <li>
+                    Audio commentary by film scholars Peter Brunette and Frank
+                    Burke
+                  </li>
+                  <li>Deleted scene</li>
+                  <li>Interview with star Magali Noël</li>
+                  <li>
+                    Archival audio interviews of Fellini and his friends and
+                    family, by critic Gideon Bachmann
+                  </li>
+                </ul>
+              </div>
+            </div>
             <p className={`${styles.showPlaceholder}`}></p>
             <Link className={`${styles.showReturn}`} to="/films">
               <b>Return to Films</b>
@@ -39,7 +72,7 @@ function FilmShowPage() {
           <article className={`${styles.right}`}>
             <img className={`${styles.showImg}`} src={imgUrl} alt="" />
             <div className={`${styles.showPlaceholder}`}>
-              MSRP: ${film.price}
+              <p className={`${styles.button}`}>DVD: ${film.price}</p>
             </div>
             <div className={`${styles.showPlaceholder}`}>
               <AddItemButton film={film} />
