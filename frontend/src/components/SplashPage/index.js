@@ -13,8 +13,11 @@ function SplashPage() {
           src="https://s3.amazonaws.com/criterion-production/spotlight_images/4245-aa50a5f37415a5b31d01577f73327950/I7ltCM01T3eYLeC94Ag5Gd1zTTgcNP_w700.png"
           alt="Film screen cap"
         />
-        <NavLink className={`${styles.authLink}`} to="/login">
-          Login Here
+        <p className={`${styles.announce}`}>
+          A sale might be happening but you'll never know, will you?
+        </p>
+        <NavLink className={`${styles.authLink}`} to="/films">
+          Shop Sublimus!
         </NavLink>
       </article>
     </main>
