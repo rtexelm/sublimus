@@ -11,18 +11,38 @@
 
 }
 
+.videoContainer {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
 .spotlight {
     background: url("https://s3.amazonaws.com/criterion-production/spotlight_images/5937-9ffbed240dc1b870dbe98c5727b39dca/BbdP96xchg4NUKA88ZFOX0yxqephR0_w1300.jpg") no-repeat center center fixed;
     background-size: cover;
+    img {
+        z-index: 5;
+    }
 }
 
 .announce {
+    z-index: 5;
     font: 300 1.5rem $serif;
     color: white;
     margin: 0 0 24px;
 }
 
 .authLink {
+    z-index: 5;
     display: inline-block;
     text-align: center;
     font: 600 13px 'Figtree', sans-serif;
