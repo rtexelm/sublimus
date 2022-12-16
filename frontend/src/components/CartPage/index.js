@@ -26,22 +26,23 @@ function CartPage() {
   });
 
   return (
-    <div>
-      {message ? (
-        <p className={`${styles.cartMessage}`}>{message}</p>
-      ) : (
-        <div>
-          {cartItems}
-          <Link to={`checkout`}>
-            <b>Proceed to Checkout</b>
-          </Link>
-        </div>
-      )}
-
-      <br />
-      <Link to={`films`}>
-        <b>Find More Films</b>
-      </Link>
+    <div className={`${styles.fullPage}`}>
+      <h1>Your Cart</h1>
+      <div className={`${styles.cartBox}`}>
+        {message ? (
+          <h1 className={`${styles.cartMessage}`}>{message}</h1>
+        ) : (
+          <div>
+            {cartItems}
+            <Link className={`${styles.checkout}`} to={`checkout`}>
+              Proceed to Checkout
+            </Link>
+          </div>
+        )}
+        <Link className={`${styles.return}`} to={`films`}>
+          Find More Films
+        </Link>
+      </div>
     </div>
   );
 }

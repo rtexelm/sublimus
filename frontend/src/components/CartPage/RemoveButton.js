@@ -12,9 +12,9 @@ function RemoveButton({ itemId }) {
     dispatch(deleteItem(data));
   };
   return (
-    <h1 className={`${styles.remove}`} onClick={handleRemove}>
+    <p className={`${styles.remove}`} onClick={handleRemove}>
       Remove
-    </h1>
+    </p>
   );
 }
 

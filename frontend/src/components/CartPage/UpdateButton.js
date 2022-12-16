@@ -21,24 +21,24 @@ function UpdateButton({ item }) {
   };
 
   return (
-    <form onSubmit={handleUpdate}>
-      <fieldset>
+    <form className={`${styles.updateForm}`} onSubmit={handleUpdate}>
+      {errors && (
         <ul className={`${errors}`}>
           {errors.map((error) => (
             <li key={error}>{error}</li>
           ))}
         </ul>
-        <br />
-        <label>
-          {" "}
-          QUANTITY
-          <input
-            type="text"
-            value={qty}
-            onChange={(e) => setQty(e.target.value)}
-          />
-        </label>
-      </fieldset>
+      )}
+      <label>
+        {" "}
+        QUANTITY:
+        <input
+          type="text"
+          value={qty}
+          size="2"
+          onChange={(e) => setQty(e.target.value)}
+        />
+      </label>
       <button className={`${styles.update}`}>Update</button>
     </form>
   );

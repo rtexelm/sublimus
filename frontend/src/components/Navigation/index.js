@@ -48,8 +48,8 @@ function Navigation() {
           <NavLink className={styles.qLink} to="/films">
             Browse the Selections
           </NavLink>
-          <NavLink className={styles.qLink} to="/signup">
-            The Create Account Form
+          <NavLink className={styles.qLink} to="/featured">
+            Shop Featured Picks
           </NavLink>
         </div>
         <CartButton className={`${styles.profileButton}`} />

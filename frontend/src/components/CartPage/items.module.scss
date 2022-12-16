@@ -1,11 +1,105 @@
 @import "vars.scss";
 
 
+.fullPage {
+    background-color: #f6f6f6;
+    min-height: 100vh;
+    padding: 48px;
+    h1 {
+        font: $sansH1;
+    }
+}
+
+.cartBox {
+    background: white;
+    box-sizing: border-box;
+    padding: 48px;
+    border: 48px solid #dcdcdb;
+    margin: 75px 0;
+}
+
+.cartTable {
+    display: flex;
+    flex-flow: row nowrap;
+    div {
+        flex: 2 1 0;
+        // border: 1px solid blue;
+        padding: 24px;
+    }
+    img {
+        flex: 1 1 0;
+        max-width: 120px;
+    }
+    .titleBox {
+        font: $sansLink;
+        color: #b4841e;
+        p {
+            font: $serif;
+            padding-top: 24px;
+            color: #00CC8F;
+            font-style: italic;
+            span {
+                color: #A0A0A0;
+            }
+        }
+    }
+    .price {
+        padding-top: 24px;
+        font: $sansLink;
+    }
+
+}
+
+.cartMessage {
+    font: $serifH1;
+    font-size: 4rem;
+    text-align: center;
+    margin: 0 48px;
+    padding: 128px 0px;
+}
+
+.checkout {
+    margin: 48px auto;
+    @include linkButtonPrimary;
+    background-color: #00CC8F;
+    color: white;
+    border: 0;
+    width: 250px;
+
+}
+
+.return {
+    @include linkButtonPrimary;
+    background-color: #b4841e;
+    color: black;
+    border: 0;
+    width: 250px;
+}
+
 .remove {
-    @include authSubmit;
+    padding-top: 5px;
+    font: $sansLink;
+    text-transform: uppercase;
+    color: #A0A0A0;
     cursor: pointer;
 }
 
+.updateForm {
+    label {
+        font: $sansLink;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #A0A0A0;
+    }
+}
+
 .update {
+    font: $sansLink;
+    text-transform: uppercase;
+    border: none;
+    padding-right: 32px;
+    color:#A0A0A0;
+    overflow: visible;
+    background: transparent;
     cursor: pointer;
 }
