@@ -17,9 +17,6 @@ function CheckoutPage() {
     dispatch(fetchItems());
   }, [dispatch]);
 
-  // console.log(items);
-  // console.log(message);
-
   const checkoutItems = items.map((item) => {
     return (
       <div>

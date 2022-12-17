@@ -29,7 +29,6 @@ export const fetchItems = () => async (dispatch) => {
   const res = await csrfFetch(`/api/cart_items/`);
   const data = await res.json();
   dispatch(receiveItems(data));
-  // return res;
 };
 
 // export const fetchItem = (itemId) => async (dispatch) => {

@@ -16,12 +16,9 @@ function FilmShowPage() {
     dispatch(fetchFilm(filmId));
   }, [filmId, dispatch]);
 
-  // console.log(imgUrl);
-
   return (
     <>
       <div className={`container centered`}>
-        {/* <div className=`}> */}
         <section className={`${styles.content}`}>
           <article className={`${styles.details}`}>
             <div className={`${styles.headerBox}`}>

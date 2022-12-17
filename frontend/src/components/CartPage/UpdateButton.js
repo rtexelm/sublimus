@@ -4,7 +4,6 @@ import { deleteItem, updateItem } from "../../store/cart";
 import styles from "./items.module.scss";
 
 function UpdateButton({ item }) {
-  // const {id, quantity} = item
   const dispatch = useDispatch();
   const [qty, setQty] = useState(item.quantity);
   const [errors, setErrors] = useState([]);

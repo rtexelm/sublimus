@@ -25,10 +25,8 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    // margin-right: ;
     margin-top: 48px;
     margin-left: 48px;
-    // background-color: pink;
     width: 60%;
     min-width: 400px;
     margin-bottom: 25px;
@@ -37,7 +35,6 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        // gap: 24px;
         padding: 24px 0 48px; 
         .info {
             font: $sansLink;
@@ -67,7 +64,6 @@
     display: flex;
     position: relative;
     flex-flow: column nowrap;
-    // justify-content: flex-start;
     flex: 4 0 0;
     background: #f6f6f6;
 }

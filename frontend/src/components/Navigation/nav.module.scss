@@ -11,22 +11,14 @@
     width: 96.6%;
     z-index: 1;
     padding: 20px 24px;
-    // color: white;
-    // background-color: transparent;
 }
 
 .navBar {
     display: flex;
-    // width: 95%;
-    // flex-direction: row;
-    // flex-wrap: nowrap;
     justify-content: flex-end;
-    // align-items: center;
-    // gap: 14px;
 }
 
 .home {
-    // flex-grow: 3;
     margin-right: auto;
     .logoLink {
         cursor: pointer;

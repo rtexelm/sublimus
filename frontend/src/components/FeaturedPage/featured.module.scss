@@ -17,12 +17,10 @@
     display: flex;
     flex-flow: row nowrap;
     gap: 2px;
-    // width: 
     margin: 0 48px;
     .featuredBox {
         cursor: pointer;
         background: white;
-        // border: 1px solid blue;
         flex: 1 1 ;
         display: flex;
         flex-flow: column nowrap;

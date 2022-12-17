@@ -1,11 +1,9 @@
 @import "vars.scss";
 
 .content {
-    // background-color: yellow;
     display: flex;
     flex-wrap: nowrap;
     gap: 48px;
-    // width: 100%;
     margin-bottom: 25px;
     p {
         margin-bottom: 20px;
@@ -23,14 +21,12 @@
     margin: 200px 48px 0 96px;
     margin-right: 48px;
     margin-left: 96px;
-    // background-color: pink;
     width: 50%;
     min-width: 600px;
 }
 
 .text {
     font: 600 13px 'Figtree', sans-serif;
-    // background-color: lightblue;
     border: 0;
     border-bottom: 2px solid lightgrey;
     width: 100%;
@@ -81,6 +77,5 @@
 
 .right {
     background: #f6f6f6;
-    // width: auto;
     flex-grow: 1;
 }

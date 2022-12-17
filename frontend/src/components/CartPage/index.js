@@ -18,9 +18,6 @@ function CartPage() {
     dispatch(fetchItems());
   }, [dispatch]);
 
-  // console.log(items);
-  // console.log(message);
-
   const cartItems = items.map((item) => {
     return <CartItem key={item.id} item={item} />;
   });

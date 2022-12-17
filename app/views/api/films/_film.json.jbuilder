@@ -5,7 +5,8 @@ json.extract! film,
   :description, 
   :year,
   :price
-  
+
+# Exmaple code for photo inclusion from Bench_BnB
 # if bench.photo.attached?
 #   json.photo_url url_for(bench.photo) 
 # else

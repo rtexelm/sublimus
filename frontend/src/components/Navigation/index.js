@@ -4,15 +4,12 @@ import { useSelector } from "react-redux";
 import ProfileButton from "./ProfileButton";
 import styles from "./nav.module.scss";
 import CartButton from "./CartButton";
-// import getItems from "../../store/cart";
 
 function Navigation() {
   const location = useLocation();
   const sessionUser = useSelector((state) => state.session.user);
   const splash =
     location.pathname === "/" ? styles.navHeadSplash : styles.navHead;
-
-  // console.log(location.pathname);
 
   // let sessionLinks;
   // if (sessionUser) {
