@@ -24,12 +24,12 @@ function CartPage() {
 
   return (
     <div className={`${styles.fullPage}`}>
-      <h1>Your Cart</h1>
+      <h1>YOUR CART</h1>
       <div className={`${styles.cartBox}`}>
         {message ? (
           <h1 className={`${styles.cartMessage}`}>{message}</h1>
         ) : (
-          <div>
+          <div className={`${styles.cartList}`}>
             {cartItems}
             <Link className={`${styles.checkout}`} to={`checkout`}>
               Proceed to Checkout

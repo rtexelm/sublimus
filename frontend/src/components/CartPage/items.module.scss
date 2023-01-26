@@ -14,14 +14,21 @@
     background: white;
     box-sizing: border-box;
     padding: 48px;
-    border: 48px solid #dcdcdb;
+    border: 48px solid #ededed;
     margin: 75px 0;
 }
 
+.cartList {
+    border-top: 2px solid #f6f6f6;
+    padding-top: 28px;
+}
+
 .cartTable {
-    margin-bottom: 20px;
+    margin-bottom: 28px;
     display: flex;
     flex-flow: row nowrap;
+    padding-bottom: 28px;
+    border-bottom: 2px solid #f6f6f6;
     div {
         flex: 2 1 0;
         padding: 24px;
@@ -62,7 +69,7 @@
 }
 
 .checkout {
-    margin: 48px auto;
+    margin: 36px auto;
     @include linkButtonPrimary;
     background-color: #00CC8F;
     color: white;
