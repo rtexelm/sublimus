@@ -31,9 +31,11 @@ function CartPage() {
         ) : (
           <div className={`${styles.cartList}`}>
             {cartItems}
-            <Link className={`${styles.checkout}`} to={`checkout`}>
-              Proceed to Checkout
-            </Link>
+            <section className={`${styles.cartStats}`}>
+              <Link className={`${styles.checkout}`} to={`checkout`}>
+                Proceed to Checkout
+              </Link>
+            </section>
           </div>
         )}
         <Link className={`${styles.return}`} to={`films`}>
