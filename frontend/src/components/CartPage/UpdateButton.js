@@ -30,7 +30,7 @@ function UpdateButton({ item }) {
       )}
       <label>
         {" "}
-        QUANTITY:
+        QUANTITY:{" "}
         <input
           type="text"
           value={qty}
