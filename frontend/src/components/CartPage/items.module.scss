@@ -6,7 +6,7 @@
     min-height: 100vh;
     padding: 104px 48px 48px;
     h1 {
-        font: $sansH1;
+        font: $sansH2;
     }
 }
 
@@ -16,6 +16,12 @@
     padding: 48px;
     border: 48px solid #ededed;
     margin: 55px 0;
+}
+
+.cartHeader {
+    font: $sansLink;
+    text-transform: uppercase;
+    margin-bottom: 56px;
 }
 
 .cartList {
@@ -68,6 +74,21 @@
     padding: 128px 0px;
 }
 
+.cartStats {
+    margin-top: 56px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.cartTotals {
+    display: flex;
+    justify-content: space-between;
+    font: $sansLink;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f6f6f6;
+}
+
 .checkout {
     margin: 36px auto;
     @include linkButtonPrimary;
@@ -84,6 +105,8 @@
     color: black;
     border: 0;
     width: 250px;
+    // float: right;
+    // clear: both;
 }
 
 .remove {
