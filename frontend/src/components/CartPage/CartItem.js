@@ -23,14 +23,12 @@ function CartItem({ item }) {
       </div>
       <div>
         <UpdateButton item={item} />
-        <p className={`${styles.price}`}>${price}</p>
+        <p className={`${styles.price}`}>${price * quantity}</p>
       </div>
       <div>
         <RemoveButton itemId={id} />
       </div>
     </div>
-    //   </div>
-    // </div>
   );
 }
 

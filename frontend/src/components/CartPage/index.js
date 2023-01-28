@@ -9,6 +9,21 @@ function CartPage() {
   const dispatch = useDispatch();
   const sessionUser = useSelector((state) => state.session.user);
   const items = useSelector(getItems);
+  const totalItems = () => {
+    let total = 0;
+    for (const i of items) {
+      total += i.quantity;
+    }
+    return total;
+  };
+  const subTotal = () => {
+    let total = 0;
+    for (const i of items) {
+      total += i.quantity * i.price;
+    }
+    return total.toFixed(2);
+  };
+
   let message = "";
 
   if (!sessionUser) message = "Sign In To View Cart";
@@ -24,17 +39,35 @@ function CartPage() {
 
   return (
     <div className={`${styles.fullPage}`}>
-      <h1>Your Cart</h1>
+      <h1>YOUR CART</h1>
       <div className={`${styles.cartBox}`}>
         {message ? (
           <h1 className={`${styles.cartMessage}`}>{message}</h1>
         ) : (
-          <div>
-            {cartItems}
-            <Link className={`${styles.checkout}`} to={`checkout`}>
-              Proceed to Checkout
-            </Link>
-          </div>
+          <>
+            <p className={`${styles.cartHeader}`}>{totalItems()} Items</p>
+            <div className={`${styles.cartList}`}>
+              {cartItems}
+              <section className={`${styles.cartStats}`}>
+                <div>
+                  <p>
+                    <span className={`${styles.cartHelp}`}>Need Help?</span>
+                    <br />
+                    Contact me at my current email.
+                  </p>
+                </div>
+                <div>
+                  <dl className={`${styles.cartTotals}`}>
+                    <dt>SUBTOTAL</dt>
+                    <dd>{subTotal()}</dd>
+                  </dl>
+                  <Link className={`${styles.checkout}`} to={`checkout`}>
+                    Proceed to Checkout
+                  </Link>
+                </div>
+              </section>
+            </div>
+          </>
         )}
         <Link className={`${styles.return}`} to={`films`}>
           Find More Films
