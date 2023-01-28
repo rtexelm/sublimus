@@ -50,7 +50,11 @@ function CartPage() {
               {cartItems}
               <section className={`${styles.cartStats}`}>
                 <div>
-                  <span>Need Help</span>
+                  <p>
+                    <span className={`${styles.cartHelp}`}>Need Help?</span>
+                    <br />
+                    Contact me at my current email.
+                  </p>
                 </div>
                 <div>
                   <dl className={`${styles.cartTotals}`}>

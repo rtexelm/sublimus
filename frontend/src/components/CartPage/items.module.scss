@@ -81,6 +81,12 @@
     justify-content: space-between;
 }
 
+.cartHelp {
+    font: $sansLink;
+    text-transform: uppercase;
+
+}
+
 .cartTotals {
     display: flex;
     justify-content: space-between;
