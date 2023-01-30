@@ -61,6 +61,10 @@ function CartPage() {
                     <dt>SUBTOTAL</dt>
                     <dd>{subTotal()}</dd>
                   </dl>
+                  <dl className={`${styles.cartTotals} ${styles.esTotal}`}>
+                    <dt>Estimated Total</dt>
+                    <dd>{subTotal()}</dd>
+                  </dl>
                   <Link className={`${styles.checkout}`} to={`checkout`}>
                     Proceed to Checkout
                   </Link>

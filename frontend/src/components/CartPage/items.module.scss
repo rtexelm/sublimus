@@ -88,15 +88,27 @@
 }
 
 .cartTotals {
+    gap: 25px;
+    min-width: 250px;
     display: flex;
     justify-content: space-between;
     font: $sansLink;
     padding-bottom: 10px;
     border-bottom: 2px solid #f6f6f6;
+    text-transform: uppercase;
+}
+
+.esTotal {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    border-bottom: 0;
+    dd {
+        color:#00CC8F;
+    }
 }
 
 .checkout {
-    margin: 36px auto;
+    margin: 28px auto;
     @include linkButtonPrimary;
     background-color: #00CC8F;
     color: white;
