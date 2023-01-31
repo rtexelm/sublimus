@@ -148,6 +148,12 @@
         text-transform: uppercase;
         color: #A0A0A0;
     }
+    input[type="text"] {
+        font: $sansLink;
+        font-size: 12px;
+        border: 2px solid #ededed;
+        text-align: center;
+    }
 }
 
 .update {
