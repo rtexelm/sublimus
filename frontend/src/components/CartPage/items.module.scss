@@ -47,7 +47,7 @@
         font: $sansLink;
         color: #b4841e;
         p {
-            font: $serif;
+            font: 300 .9em $serif;
             padding-top: 24px;
             color: #00CC8F;
             font-style: italic;
@@ -87,9 +87,15 @@
 
 }
 
+.cartEpilogue {
+    width: 40%;
+    min-width: 250px;
+}
+
 .cartTotals {
     gap: 25px;
-    min-width: 250px;
+    // width: 40%;
+    // min-width: 250px;
     display: flex;
     justify-content: space-between;
     font: $sansLink;
@@ -111,10 +117,10 @@
     margin: 28px auto;
     @include linkButtonPrimary;
     background-color: #00CC8F;
-    color: white;
     border: 0;
-    width: 250px;
-
+    &:visited {
+        color: white;
+    }
 }
 
 .return {

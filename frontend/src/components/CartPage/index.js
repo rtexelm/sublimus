@@ -56,7 +56,7 @@ function CartPage() {
                     Contact me at my current email.
                   </p>
                 </div>
-                <div>
+                <div className={`${styles.cartEpilogue}`}>
                   <dl className={`${styles.cartTotals}`}>
                     <dt>SUBTOTAL</dt>
                     <dd>{subTotal()}</dd>
