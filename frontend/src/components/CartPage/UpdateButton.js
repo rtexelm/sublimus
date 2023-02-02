@@ -35,6 +35,7 @@ function UpdateButton({ item }) {
           type="text"
           value={qty}
           size="2"
+          maxLength={`1`}
           onChange={(e) => setQty(e.target.value)}
         />
       </label>

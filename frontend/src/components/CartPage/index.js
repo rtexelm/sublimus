@@ -56,9 +56,13 @@ function CartPage() {
                     Contact me at my current email.
                   </p>
                 </div>
-                <div>
+                <div className={`${styles.cartEpilogue}`}>
                   <dl className={`${styles.cartTotals}`}>
                     <dt>SUBTOTAL</dt>
+                    <dd>{subTotal()}</dd>
+                  </dl>
+                  <dl className={`${styles.cartTotals} ${styles.esTotal}`}>
+                    <dt>Estimated Total</dt>
                     <dd>{subTotal()}</dd>
                   </dl>
                   <Link className={`${styles.checkout}`} to={`checkout`}>
