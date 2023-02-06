@@ -5,7 +5,7 @@ class Api::PaymentsController < ApplicationController
   
   def create
 
-    Stripe.api_key = $stripe_key
+    Stripe.api_key = "#{Rails.application.credentials.stripe[:secret_key]}"
     
   end
   
