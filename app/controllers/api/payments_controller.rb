@@ -6,9 +6,18 @@ class Api::PaymentsController < ApplicationController
   
   def create
 
-    Stripe.api_key = "#{Rails.application.credentials.stripe[:secret_key]}"
+    def calculate_total
+      total = 0
+      current_user.cart_items.each do |item|
+        total += (item.quantity * item.film.price)
+      end
+      print total
+      return (total.round(2) * 100).to_i
+    end
 
-    payment_intent = Stripe::PaymentIntent.create (
+    Stripe.api_key = Rails.application.credentials.stripe[:secret_key]
+
+    payment_intent = Stripe::PaymentIntent.create(
       amount: 1000,
       currency: 'usd',
       automatic_payment_methods: {
