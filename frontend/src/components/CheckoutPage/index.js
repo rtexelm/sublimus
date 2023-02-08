@@ -5,8 +5,13 @@ import { fetchItems, getItems } from "../../store/cart";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import styles from "./checkout.module.scss";
+import { createPayment } from "../../store/payments";
+
+const STRIPE_PUBLIC = process.env.REACT_APP_STRIPE_PUBLIC;
+const stripePromise = loadStripe(STRIPE_PUBLIC);
 
 function CheckoutPage() {
+  const [clientSecret, setClientSecret] = useState("");
   const dispatch = useDispatch();
   const sessionUser = useSelector((state) => state.session.user);
   const items = useSelector(getItems);
@@ -16,7 +21,7 @@ function CheckoutPage() {
   if (items.length === 0) message = "No items to chekout";
 
   useEffect(() => {
-    dispatch(fetchItems());
+    dispatch(createPayment());
   }, [dispatch]);
 
   const checkoutItems = items.map((item) => {
