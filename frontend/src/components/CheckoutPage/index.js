@@ -13,8 +13,10 @@ const stripePromise = loadStripe(STRIPE_PUBLIC);
 
 function CheckoutPage() {
   const dispatch = useDispatch();
+  // const [clientSecret, setClientSecret] = useState("");
   const clientSecret = useSelector(getClientSecret);
-  const items = useSelector(getItems);
+  console.log(clientSecret);
+  // const items = useSelector(getItems);
 
   useEffect(() => {
     dispatch(createPayment());
@@ -24,13 +26,10 @@ function CheckoutPage() {
     theme: "night",
   };
 
-  const options = { clientSecret, appearance };
+  // const options = { clientSecret: clientSecret, appearance: appearance };
+  // console.log(clientSecret);
 
-  return (
-    <Elements options={options} stripe={stripePromise}>
-      <PaymentForm />
-    </Elements>
-  );
+  return <p>{`${clientSecret}`}</p>;
 }
 
 export default CheckoutPage;

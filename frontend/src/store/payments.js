@@ -7,7 +7,7 @@ export const receiveClientSecret = (secret) => ({
   payload: secret,
 });
 
-export const getClientSecret = (state) => state.clientSecret;
+export const getClientSecret = (state) => state.payments.client_secret;
 
 export const createPayment = (customerInfo) => async (dispatch) => {
   const res = await csrfFetch(`/api/payments/`, {
@@ -27,7 +27,7 @@ function paymentsReducer(state = {}, action) {
 
   switch (action.type) {
     case RECEIVE_CLIENT_SECRET:
-      return { ...newState, clientSecret: action.payload };
+      return { ...newState, ...action.payload };
     default:
       return state;
   }
