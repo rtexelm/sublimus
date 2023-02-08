@@ -5,47 +5,31 @@ import { fetchItems, getItems } from "../../store/cart";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import styles from "./checkout.module.scss";
-import { createPayment } from "../../store/payments";
+import { createPayment, getClientSecret } from "../../store/payments";
+import PaymentForm from "./PaymentForm";
 
 const STRIPE_PUBLIC = process.env.REACT_APP_STRIPE_PUBLIC;
 const stripePromise = loadStripe(STRIPE_PUBLIC);
 
 function CheckoutPage() {
-  const [clientSecret, setClientSecret] = useState("");
   const dispatch = useDispatch();
-  const sessionUser = useSelector((state) => state.session.user);
+  const clientSecret = useSelector(getClientSecret);
   const items = useSelector(getItems);
-  let message = "";
-
-  if (!sessionUser) message = "Sign In To Checkout Items";
-  if (items.length === 0) message = "No items to chekout";
 
   useEffect(() => {
     dispatch(createPayment());
   }, [dispatch]);
 
-  const checkoutItems = items.map((item) => {
-    return (
-      <div>
-        <p>{item.title}</p>
-        <p>{item.price}</p>
-        <p>Quantitty: {item.quantity}</p>
-        <br />
-      </div>
-    );
-  });
+  const appearance = {
+    theme: "night",
+  };
+
+  const options = { clientSecret, appearance };
 
   return (
-    <>
-      <h1>You have successfully checkedout!</h1>
-      <p>Order #{Math.floor(Math.random() * 101)}</p>
-      <br />
-      <p>{checkoutItems}</p>
-      <br />
-      <Link to={`films`}>
-        <em>Find More Films</em>
-      </Link>
-    </>
+    <Elements options={options} stripe={stripePromise}>
+      <PaymentForm />
+    </Elements>
   );
 }
 
