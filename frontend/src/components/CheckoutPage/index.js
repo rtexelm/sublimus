@@ -15,7 +15,7 @@ function CheckoutPage() {
   const dispatch = useDispatch();
   // const [clientSecret, setClientSecret] = useState("");
   const clientSecret = useSelector(getClientSecret);
-  console.log(clientSecret);
+  // console.log(clientSecret);
   // const items = useSelector(getItems);
 
   useEffect(() => {
@@ -26,10 +26,19 @@ function CheckoutPage() {
     theme: "night",
   };
 
+  const options = {
+    clientSecret,
+    appearance,
+  };
+
   // const options = { clientSecret: clientSecret, appearance: appearance };
   // console.log(clientSecret);
 
-  return <p>{`${clientSecret}`}</p>;
+  return (
+    <Elements stripe={stripePromise} options={options}>
+      <PaymentForm />
+    </Elements>
+  );
 }
 
 export default CheckoutPage;
