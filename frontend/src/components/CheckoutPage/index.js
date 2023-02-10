@@ -12,15 +12,16 @@ const STRIPE_PUBLIC = process.env.REACT_APP_STRIPE_PUBLIC;
 const stripePromise = loadStripe(STRIPE_PUBLIC);
 
 function CheckoutPage() {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   // const [clientSecret, setClientSecret] = useState("");
-  const clientSecret = useSelector(getClientSecret);
-  // console.log(clientSecret);
   // const items = useSelector(getItems);
 
-  useEffect(() => {
-    dispatch(createPayment());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(createPayment());
+  // }, [dispatch]);
+
+  const clientSecret = useSelector(getClientSecret);
+  console.log(clientSecret);
 
   const appearance = {
     theme: "night",
