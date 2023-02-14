@@ -32,9 +32,9 @@ function App() {
         <Route path="/cart">
           <CartPage />
         </Route>
-        <Route path="/checkout">
+        <Route exact path="/checkout">
           <CheckoutPage />
-          <Route path="/acception">
+          <Route path="/checkout/acception">
             <Acception />
           </Route>
         </Route>

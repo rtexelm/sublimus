@@ -7,6 +7,7 @@ const Acception = () => {
 
   useEffect(() => {
     if (!stripe) {
+      setMessage("Stripe malfunctioning");
       return;
     }
 
