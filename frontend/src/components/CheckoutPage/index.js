@@ -7,6 +7,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import styles from "./checkout.module.scss";
 import { createPayment, getClientSecret } from "../../store/payments";
 import PaymentForm from "./PaymentForm";
+import Acception from "./Acception";
 
 const STRIPE_PUBLIC = process.env.REACT_APP_STRIPE_PUBLIC;
 const stripePromise = loadStripe(STRIPE_PUBLIC);

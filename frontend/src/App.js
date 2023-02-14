@@ -34,9 +34,9 @@ function App() {
         </Route>
         <Route path="/checkout">
           <CheckoutPage />
-        </Route>
-        <Route path="/acception">
-          <Acception />
+          <Route path="/acception">
+            <Acception />
+          </Route>
         </Route>
         <Route path="/login">
           <LoginFormPage />

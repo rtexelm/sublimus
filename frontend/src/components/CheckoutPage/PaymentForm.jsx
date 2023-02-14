@@ -26,7 +26,7 @@ function PaymentForm() {
       //`Elements` instance that was used to create the Payment Element
       elements,
       confirmParams: {
-        return_url: "/acception",
+        return_url: "http://localhost:3000/checkout/acception",
       },
     });
 

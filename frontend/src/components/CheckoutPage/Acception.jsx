@@ -49,7 +49,11 @@ const Acception = () => {
     });
   }, [stripe]);
 
-  return message;
+  return (
+    <>
+      <p>{message}</p>
+    </>
+  );
 };
 
 export default Acception;
