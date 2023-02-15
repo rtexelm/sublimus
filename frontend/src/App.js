@@ -10,6 +10,7 @@ import FilmShowPage from "./components/FilmShowPage";
 import CartPage from "./components/CartPage";
 import CheckoutPage from "./components/CheckoutPage";
 import FeaturedPage from "./components/FeaturedPage";
+import PaymentStatusContainer from "./components/CheckoutPage/PaymentStatusContainer";
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
         </Route>
         <Route exact path="/checkout">
           <CheckoutPage />
+        </Route>
+        <Route path="/payment">
+          <PaymentStatusContainer />
         </Route>
         <Route path="/login">
           <LoginFormPage />

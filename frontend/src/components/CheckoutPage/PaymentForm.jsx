@@ -29,7 +29,7 @@ function PaymentForm() {
       //`Elements` instance that was used to create the Payment Element
       elements,
       confirmParams: {
-        return_url: `http://localhost:3000/checkout/acception`,
+        return_url: `http://localhost:3000/payment`,
       },
     });
 
@@ -52,9 +52,9 @@ function PaymentForm() {
         <button disabled={!stripe}>Submit</button>
         {errorMessage && <div>{errorMessage}</div>}
       </form>
-      <Route path={`${path}/acception`}>
+      {/* <Route path={`${path}/acception`}>
         <Acception />
-      </Route>
+      </Route> */}
     </>
   );
 }

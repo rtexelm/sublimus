@@ -52,7 +52,6 @@ const Acception = () => {
   return (
     <>
       <p>{message}</p>
-      <p>Payment status here</p>
     </>
   );
 };
