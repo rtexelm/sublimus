@@ -4,10 +4,13 @@ import {
   useStripe,
   useElements,
 } from "@stripe/react-stripe-js";
+import Acception from "./Acception";
+import { Route, useRouteMatch } from "react-router-dom";
 
 function PaymentForm() {
   const stripe = useStripe();
   const elements = useElements();
+  const { path } = useRouteMatch();
 
   const [errorMessage, setErrorMessage] = useState(null);
 
@@ -26,7 +29,7 @@ function PaymentForm() {
       //`Elements` instance that was used to create the Payment Element
       elements,
       confirmParams: {
-        return_url: "http://localhost:3000/checkout/acception",
+        return_url: `http://localhost:3000/checkout/acception`,
       },
     });
 
@@ -43,11 +46,16 @@ function PaymentForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <PaymentElement />
-      <button disabled={!stripe}>Submit</button>
-      {errorMessage && <div>{errorMessage}</div>}
-    </form>
+    <>
+      <form onSubmit={handleSubmit}>
+        <PaymentElement />
+        <button disabled={!stripe}>Submit</button>
+        {errorMessage && <div>{errorMessage}</div>}
+      </form>
+      <Route path={`${path}/acception`}>
+        <Acception />
+      </Route>
+    </>
   );
 }
 

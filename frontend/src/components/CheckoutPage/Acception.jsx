@@ -7,7 +7,6 @@ const Acception = () => {
 
   useEffect(() => {
     if (!stripe) {
-      setMessage("Stripe malfunctioning");
       return;
     }
 
@@ -53,6 +52,7 @@ const Acception = () => {
   return (
     <>
       <p>{message}</p>
+      <p>Payment status here</p>
     </>
   );
 };
