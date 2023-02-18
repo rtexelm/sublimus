@@ -6,7 +6,7 @@ import Acception from "./Acception";
 const STRIPE_PUBLIC = process.env.REACT_APP_STRIPE_PUBLIC;
 const stripePromise = loadStripe(STRIPE_PUBLIC);
 
-const PaymentStatusContainer = () => {
+const PaymentStatus = () => {
   return (
     <Elements stripe={stripePromise}>
       <Acception />
@@ -14,4 +14,4 @@ const PaymentStatusContainer = () => {
   );
 };
 
-export default PaymentStatusContainer;
+export default PaymentStatus;

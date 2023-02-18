@@ -54,7 +54,7 @@ class Api::CartItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:cart_item).permit(:user_id, :film_id, :quantity)
+    params.require(:cart_item).permit(:id, :user_id, :film_id, :quantity)
   end
 
   # def remove_item?(item, quantity)
