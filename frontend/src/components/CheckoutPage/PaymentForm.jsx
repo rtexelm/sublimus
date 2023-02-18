@@ -81,7 +81,6 @@ function PaymentForm() {
       confirmParams: {
         return_url: `http://localhost:3000/checkout`,
       },
-      redirect: "if_required",
     });
 
     if (error.type === "card_error" || error.type === "validation_error") {
