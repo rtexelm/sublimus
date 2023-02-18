@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useStripe } from "@stripe/react-stripe-js";
+import styles from "./status.module.scss";
 
 const Acception = () => {
   const stripe = useStripe();
@@ -51,7 +52,7 @@ const Acception = () => {
 
   return (
     <>
-      <p>{message}</p>
+      <p className={`${styles.statusMessage}`}>{message}</p>
     </>
   );
 };

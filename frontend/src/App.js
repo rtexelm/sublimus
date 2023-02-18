@@ -10,7 +10,7 @@ import FilmShowPage from "./components/FilmShowPage";
 import CartPage from "./components/CartPage";
 import CheckoutPage from "./components/CheckoutPage";
 import FeaturedPage from "./components/FeaturedPage";
-import PaymentStatusContainer from "./components/CheckoutPage/PaymentStatusContainer";
+import PaymentStatus from "./components/PaymentStatus";
 
 function App() {
   return (
@@ -32,11 +32,11 @@ function App() {
         <Route path="/cart">
           <CartPage />
         </Route>
-        <Route exact path="/checkout">
+        <Route path="/checkout">
           <CheckoutPage />
         </Route>
         <Route path="/payment">
-          <PaymentStatusContainer />
+          <PaymentStatus />
         </Route>
         <Route path="/login">
           <LoginFormPage />
