@@ -14,6 +14,8 @@ const stripePromise = loadStripe(STRIPE_PUBLIC);
 function CheckoutPage() {
   const dispatch = useDispatch();
 
+  const items = useSelector(getItems);
+
   useEffect(() => {
     dispatch(createPayment());
   }, [dispatch]);
@@ -38,7 +40,7 @@ function CheckoutPage() {
     <div className={`${styles.pageContainer}`}>
       {clientSecret && (
         <Elements stripe={stripePromise} options={options}>
-          <PaymentForm />
+          <PaymentForm items={items} />
         </Elements>
       )}
     </div>
