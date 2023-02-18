@@ -19,7 +19,6 @@ function CheckoutPage() {
   }, [dispatch]);
 
   const clientSecret = useSelector(getClientSecret);
-  console.log(clientSecret);
 
   const appearance = {
     theme: "night",

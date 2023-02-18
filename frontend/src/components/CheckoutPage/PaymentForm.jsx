@@ -79,9 +79,8 @@ function PaymentForm() {
       //`Elements` instance that was used to create the Payment Element
       elements,
       confirmParams: {
-        return_url: `http://localhost:3000/checkout`,
+        return_url: `http://localhost:3000/payment`,
       },
-      redirect: "if_required",
     });
 
     if (error.type === "card_error" || error.type === "validation_error") {
