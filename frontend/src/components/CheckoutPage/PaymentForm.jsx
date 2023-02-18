@@ -85,13 +85,15 @@ function PaymentForm({ items }) {
           {message && <div id={`${styles.paymentMessage}`}>{message}</div>}
         </form>
         <section className={styles.chargeDetails}>
-          <h3 className={styles.helpTitle}>NEED HELP?</h3>
           <p className={styles.help}>
-            Enter card number{" "}
-            <pre id={styles.cardNumber}>4242 4242 4242 4242</pre>
-            Enter any future expiry
+            <h3 className={styles.helpTitle}>NEED HELP?</h3>
+            Enter <b>card number</b>:{" "}
+            <pre>
+              <code id={styles.cardNumber}>4242 4242 4242 4242</code>
+            </pre>
+            Enter any future <b>expiry</b>
             <br />
-            Enter arbitrary CVC and ZIP
+            Enter arbitrary <b>CVC</b> and <b>ZIP</b>
           </p>
           <dl className={`${styles.cartTotals}`}>
             <dt>Total Items</dt>

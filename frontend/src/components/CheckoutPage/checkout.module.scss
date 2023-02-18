@@ -50,18 +50,24 @@
     box-sizing: border-box;
     padding: 48px;
     border: 48px solid #ededed;
-    margin: 55px 0 55px 24px;
+    margin: 0px 0 0px 24px;
 
+}
+
+.help {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #f6f6f6;
     .helpTitle {
         font: $sansLink;
         margin-bottom: 10px;
     }
-}
-
-.help {
-    margin-bottom: 16px;
     #cardNumber {
-        font-family: 'Courier New', Courier, monospace;
+        border: solid 1px #ededed;
+    }
+    b {
+        font-weight: 500;
+        font-style: italic;
     }
 }
 
@@ -93,7 +99,7 @@
 
 /* Buttons and links */
 #submit {
-    background: #5469d4;
+    background: #00CC8F;
     font-family: Arial, sans-serif;
     color: #ffffff;
     border-radius: 4px;
