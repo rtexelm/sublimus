@@ -22,7 +22,7 @@ class Api::PaymentsController < ApplicationController
       currency: 'usd',
       automatic_payment_methods: {
         enabled: true
-      }
+      },
     )
 
     render json: {

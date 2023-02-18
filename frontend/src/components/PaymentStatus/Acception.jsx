@@ -6,27 +6,19 @@ import { Link } from "react-router-dom";
 const Acception = () => {
   const stripe = useStripe();
   const [message, setMessage] = useState(null);
+  const [tryAgain, setTryAgain] = useState(false);
 
   useEffect(() => {
     if (!stripe) {
       return;
     }
 
-    // Retrieve the "payment_intent_client_secret" query parameter appended to
-    // your return_url by Stripe.js
     const clientSecret = new URLSearchParams(window.location.search).get(
       "payment_intent_client_secret"
     );
 
     // Retrieve the PaymentIntent
     stripe.retrievePaymentIntent(clientSecret).then(({ paymentIntent }) => {
-      // Inspect the PaymentIntent `status` to indicate the status of the payment
-      // to your customer.
-      //
-      // Some payment methods will [immediately succeed or fail][0] upon
-      // confirmation, while others will first enter a `processing` state.
-      //
-      // [0]: https://stripe.com/docs/payments/payment-methods#payment-notification
       switch (paymentIntent.status) {
         case "succeeded":
           setMessage("Success! Payment received.");
@@ -39,9 +31,10 @@ const Acception = () => {
           break;
 
         case "requires_payment_method":
-          // Redirect your user back to your payment page to attempt collecting
+          // Redirect user back to payment page to attempt collecting
           // payment again
           setMessage("Payment failed. Please try another payment method.");
+          setTryAgain(true);
           break;
 
         default:
@@ -55,6 +48,11 @@ const Acception = () => {
     <div className={`${styles.fullPage}`}>
       <div className={`${styles.statusBox}`}>
         <p className={`${styles.statusMessage}`}>{message}</p>
+        {tryAgain && (
+          <Link className={`${styles.checkout}`} to={`checkout`}>
+            Return to checkout
+          </Link>
+        )}
       </div>
       <Link className={`${styles.return}`} to={`films`}>
         Continue Shopping
