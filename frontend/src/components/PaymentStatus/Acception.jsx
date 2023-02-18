@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useStripe } from "@stripe/react-stripe-js";
 import styles from "./status.module.scss";
+import { Link } from "react-router-dom";
 
 const Acception = () => {
   const stripe = useStripe();
@@ -51,9 +52,14 @@ const Acception = () => {
   }, [stripe]);
 
   return (
-    <>
-      <p className={`${styles.statusMessage}`}>{message}</p>
-    </>
+    <div className={`${styles.fullPage}`}>
+      <div className={`${styles.statusBox}`}>
+        <p className={`${styles.statusMessage}`}>{message}</p>
+      </div>
+      <Link className={`${styles.return}`} to={`films`}>
+        Continue Shopping
+      </Link>
+    </div>
   );
 };
 
