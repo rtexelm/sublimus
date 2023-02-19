@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
 import { fetchItems, getItems } from "../../../store/cart";
 import cartIcon from "../../../assets/icons8-shopping-cart-64.png";
 import NavCartItem from "./NavCartItem";
-import styles from "./cart.module.scss";
 import NavCartLinks from "./NavCartLinks";
+import styles from "./cart.module.scss";
 
 function CartButton({ cart }) {
   const dispatch = useDispatch();
@@ -33,9 +32,9 @@ function CartButton({ cart }) {
   // if (!sessionUser) setMessage("Sign In To View Cart");
   // if (items.length === 0) setMessage("Your Cart Is Empty");
 
-  useEffect(() => {
-    dispatch(fetchItems());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchItems());
+  // }, [dispatch]);
 
   const openMenu = () => {
     if (showMenu) return;
@@ -43,6 +42,8 @@ function CartButton({ cart }) {
   };
 
   useEffect(() => {
+    dispatch(fetchItems());
+
     if (!showMenu) return;
 
     const closeMenu = () => {
@@ -55,7 +56,7 @@ function CartButton({ cart }) {
     document.addEventListener("click", closeMenu);
 
     return () => document.removeEventListener("click", closeMenu);
-  }, [showMenu]);
+  }, [showMenu, dispatch]);
 
   const navCart = items.map((item) => {
     return <NavCartItem key={item.id} item={item} />;
