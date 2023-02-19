@@ -114,9 +114,19 @@
     cursor: pointer;
     border: 0;
     background-color: transparent;
+    position: relative;
 }
 
 .cartIcon {
     width: 28px;
+}
+
+.cartStatus {
+    width: 10px;
+    height: 10px;
+    background-color: #1adf7b;
+    position: absolute;
+    border-radius: 50%;
+    right: 4px;
 }
 

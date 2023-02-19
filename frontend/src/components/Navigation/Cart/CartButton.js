@@ -66,6 +66,7 @@ function CartButton({ cart }) {
     <>
       <button className={`${styles.button}`} onClick={openMenu}>
         <img className={`${styles.cartIcon}`} src={cartIcon} alt="Cart Icon" />
+        {totalItems() > 0 && <span className={`${styles.cartStatus}`}></span>}
       </button>
       {showMenu && (
         <div className={`${styles.cartDropdown}`}>
