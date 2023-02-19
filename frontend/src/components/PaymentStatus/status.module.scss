@@ -20,12 +20,21 @@
     font: $sansH2
 }
 
+.checkout {
+    margin: 28px auto;
+    @include linkButtonPrimary;
+    background-color: #00CC8F;
+    border: 0;
+
+    &:visited {
+        color: white;
+    }
+}
+
 .return {
     @include linkButtonPrimary;
     background-color: #b4841e;
     color: black;
     border: 0;
     width: 250px;
-    // float: right;
-    // clear: both;
 }

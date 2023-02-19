@@ -12,12 +12,12 @@
     }
 }
 
-.profileDropdown {
+.cartDropdown {
     animation: drop .3s ease-in-out;
     z-index: 1000;
     background-color: white;
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     position: absolute;
     width: 200px;
     height: auto;
@@ -26,6 +26,16 @@
     padding: 40px;
     margin: 0;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+
+    li {
+        display: flex;
+    }
+}
+
+.img {
+    img {
+        max-height: 71px;
+    }
 }
 
 .menuHeader {
@@ -61,20 +71,7 @@
     background-color: transparent;
 }
 
-.userIcon {
-    width: 24px;
+.cartIcon {
+    width: 28px;
 }
 
-.logout {
-    cursor: pointer;
-    padding: 12px 0 0 0;
-    border: 0;
-    background-color: transparent;
-    font: 400 .9rem 'Figtree',
-            sans-serif;
-    text-decoration: none;
-    color: dimgrey;
-    &:hover {
-        color: black;
-    }
-}
