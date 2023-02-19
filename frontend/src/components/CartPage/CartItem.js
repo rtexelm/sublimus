@@ -3,16 +3,15 @@ import { useHistory } from "react-router-dom";
 import RemoveButton from "./RemoveButton";
 import UpdateButton from "./UpdateButton";
 import styles from "./items.module.scss";
+import thumbs from "../../assets/thumbUrls";
 
 function CartItem({ item }) {
-  const { id, quantity, title, price } = item;
+  const { id, quantity, filmId, title, price } = item;
+  const thumbUrl = thumbs[filmId];
 
   return (
     <div className={`${styles.cartTable}`}>
-      <img
-        src="https://s3.amazonaws.com/criterion-production/films/2b3cb1e242f75f984a61305a512a8417/0IZ7RI0ApmwUqfotR9mOZmFlhsHjvo_small.jpg"
-        alt=""
-      />
+      <img src={thumbUrl} alt="" />
       <div className={`${styles.titleBox}`}>
         <h3>{title}</h3>
         <p>
