@@ -50,6 +50,9 @@ function ProfileButton({ user }) {
               <NavLink to="/Dashboard">My Sublimus</NavLink>
             </li>
             <li className={styles.menuItem}>{user.email}</li>
+            <li className={styles.profileLink}>
+              <NavLink to="/Dashboard">Dashboard</NavLink>
+            </li>
             <li>
               <button className={styles.logout} onClick={logout}>
                 Log Out

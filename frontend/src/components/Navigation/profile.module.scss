@@ -29,9 +29,10 @@
 }
 
 .menuHeader {
-    font: 300 1.4rem 'Source Serif Pro',
+    font: 400 1.4rem 'Source Serif Pro',
     serif;
     color: black;
+    cursor: pointer;
     margin-top: -10px;
     &:hover {
         color: dimgrey;
@@ -50,6 +51,7 @@
     text-transform: uppercase;
     color: dimgrey;
     padding-top: 12px;
+    // cursor: pointer;
     &:hover {
         color: black;
     }
@@ -70,8 +72,9 @@
     padding: 12px 0 0 0;
     border: 0;
     background-color: transparent;
-    font: 400 .9rem 'Figtree',
+    font: 600 .8rem 'Figtree',
             sans-serif;
+    text-transform: uppercase;
     text-decoration: none;
     color: dimgrey;
     &:hover {
