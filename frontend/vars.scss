@@ -20,7 +20,7 @@ $cartMenu12: 12px $sans;
     text-transform: uppercase;
     background-color: white;
     color: black;
-    width: 100%;
+    width: calc(100% - 4px);
     padding: 20px 0;
     border: 2px solid lightgrey;
     transition: $buttonTransition;

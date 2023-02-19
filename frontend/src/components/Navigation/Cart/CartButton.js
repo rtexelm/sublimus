@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchItems, getItems } from "../../../store/cart";
+import { Link } from "react-router-dom";
 import cartIcon from "../../../assets/icons8-shopping-cart-64.png";
 import NavCartItem from "./NavCartItem";
 import NavCartLinks from "./NavCartLinks";
@@ -12,7 +13,21 @@ function CartButton({ cart }) {
 
   const sessionUser = useSelector((state) => state.session.user);
   const items = useSelector(getItems);
-  const [message, setMessage] = useState("");
+  const emptyCartLink = () => {
+    if (sessionUser) {
+      return (
+        <Link className={styles.shopLink} to="/featured">
+          Start Shopping
+        </Link>
+      );
+    } else {
+      return (
+        <Link className={styles.shopLink} to="/login">
+          Sign In
+        </Link>
+      );
+    }
+  };
 
   const totalItems = () => {
     let total = 0;
@@ -21,6 +36,9 @@ function CartButton({ cart }) {
     }
     return total;
   };
+
+  const containItems = totalItems() > 0;
+
   const subTotal = () => {
     let total = 0;
     for (const i of items) {
@@ -70,12 +88,13 @@ function CartButton({ cart }) {
       </button>
       {showMenu && (
         <div className={`${styles.cartDropdown}`}>
-          {items && (
+          {containItems && (
             <>
               <ul>{navCart}</ul>
               <NavCartLinks total={subTotal()} count={totalItems()} />
             </>
           )}
+          {!containItems && emptyCartLink()}
         </div>
       )}
     </>

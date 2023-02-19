@@ -83,31 +83,8 @@
     }
 }
 
-.menuHeader {
-    font: 300 1.4rem 'Source Serif Pro',
-    serif;
-    color: black;
-    margin-top: -10px;
-    &:hover {
-        color: dimgrey;
-    }
-}
-
-.menuItem {
-    font-size: 1rem;
-    padding-top: 12px;
-    color: dimgrey;
-}
-
-.profileLink {
-    font: 600 .8rem 'Figtree',
-        sans-serif;
-    text-transform: uppercase;
-    color: dimgrey;
-    padding-top: 12px;
-    &:hover {
-        color: black;
-    }
+.shopLink {
+    @include linkButtonFull;
 }
 
 .button {
