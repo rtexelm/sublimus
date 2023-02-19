@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { fetchItems, getItems } from "../../store/cart";
+import { getItems } from "../../store/cart";
 import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
+import { loadStripe } from "@stripe/stripe-js/pure";
 import styles from "./checkout.module.scss";
 import { createPayment, getClientSecret } from "../../store/payments";
 import PaymentForm from "./PaymentForm";
