@@ -18,9 +18,11 @@
     background-color: white;
     display: flex;
     flex-flow: column nowrap;
+    overflow-y: auto;
     position: absolute;
-    width: 200px;
+    width: 240px;
     height: auto;
+    max-height: 50vh;
     top: 16px;
     right: 16px;
     padding: 40px;
@@ -29,12 +31,55 @@
 
     li {
         display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
     }
 }
 
+
+
 .img {
+    width: 57px;
+    margin-right: 16px;
     img {
         max-height: 71px;
+    }
+}
+
+.details {
+    width: calc(100% - 73px);
+    .title {
+        font: $cartMenu;
+    }
+    .type {
+        font: 300 $cartMenu12;
+        color: #8d8d8d; 
+    }
+    .price {
+        font: 700 $cartMenu12;
+        margin-top: 10px;
+    }
+}
+
+.totals {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    dt {
+        font: $cartMenu;
+        color: #8d8d8d;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    dd {
+        font: $sansH37;
+    }
+}
+
+.links {
+    display: flex;
+    .cartButton {
+        @include navCartButton;
     }
 }
 

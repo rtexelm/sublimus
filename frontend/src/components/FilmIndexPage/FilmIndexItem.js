@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import thumbs from "./thumbUrls";
+// import thumbs from "./thumbUrls";
+import thumbs from "../../assets/thumbUrls";
 import styles from "./films.module.scss";
 
 function FilmIndexItem({ film }) {

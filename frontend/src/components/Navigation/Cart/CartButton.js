@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { fetchItems, getItems } from "../../store/cart";
-import cartIcon from "../../assets/icons8-shopping-cart-64.png";
+import { fetchItems, getItems } from "../../../store/cart";
+import cartIcon from "../../../assets/icons8-shopping-cart-64.png";
 import NavCartItem from "./NavCartItem";
 import styles from "./cart.module.scss";
+import NavCartLinks from "./NavCartLinks";
 
 function CartButton({ cart }) {
   const dispatch = useDispatch();
@@ -66,14 +67,14 @@ function CartButton({ cart }) {
         <img className={`${styles.cartIcon}`} src={cartIcon} alt="Cart Icon" />
       </button>
       {showMenu && (
-        <ul className={`${styles.cartDropdown}`}>
-          {items && navCart}
-          {!items && (
-            <li className={`${styles.menuHeader}`}>
-              <NavLink to="/cart">Cart</NavLink>
-            </li>
+        <div className={`${styles.cartDropdown}`}>
+          {items && (
+            <>
+              <ul>{navCart}</ul>
+              <NavCartLinks total={subTotal()} count={totalItems()} />
+            </>
           )}
-        </ul>
+        </div>
       )}
     </>
   );

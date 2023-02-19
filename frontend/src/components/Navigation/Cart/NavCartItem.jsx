@@ -1,5 +1,5 @@
 import React from "react";
-import thumbs from "../../assets/thumbUrls";
+import thumbs from "../../../assets/thumbUrls";
 import styles from "./cart.module.scss";
 
 function NavCartItem({ item }) {
@@ -15,7 +15,7 @@ function NavCartItem({ item }) {
       <div className={`${styles.details}`}>
         <p className={styles.title}>{title}</p>
         <p className={styles.type}>{type}</p>
-        <p className={styles.price}>{price}</p>
+        <p className={styles.price}>${price}</p>
       </div>
     </li>
   );

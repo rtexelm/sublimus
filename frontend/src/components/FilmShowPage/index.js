@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { fetchFilm, getFilm } from "../../store/films";
-import { images } from "./imgUrls";
+import images from "../../assets/imgUrls";
 import AddItemButton from "./AddItemButton";
 import styles from "./film.module.scss";
 

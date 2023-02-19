@@ -6,9 +6,12 @@ $sansH2: 600 2.3rem 'Figtree', sans-serif;
 $serifH1: 400 2.9rem $serif;
 $spacingH1: .1rem;
 $sansH3: 600 .9rem $sans;
+$sansH37: 700 1rem $sans;
 $serifH3: 600 1.8 $serif;
 $sansLink: 600 13px $sans;
 $sansTable: 300 13px $sans;
+$cartMenu: 700 13px $sans;
+$cartMenu12: 12px $sans;
 
 @mixin linkButtonFull {
     display: inline-block;
@@ -55,6 +58,24 @@ $sansTable: 300 13px $sans;
     cursor: pointer;
     text-transform: uppercase;
     margin-bottom: 16px;
+    background-color: #b4841e;
+    color: white;
+    width: 100%;
+    padding: 20px;
+    border: 0;
+    transition: $buttonTransition;
+
+    &:hover {
+        background: black;
+        color: cornsilk;
+    }
+}
+
+@mixin navCartButton {
+    font: $sansLink;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
     background-color: #b4841e;
     color: white;
     width: 100%;

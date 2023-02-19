@@ -3,7 +3,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ProfileButton from "./ProfileButton";
 import styles from "./nav.module.scss";
-import CartButton from "./CartButton";
+import CartButton from "./Cart/CartButton";
 
 function Navigation() {
   const location = useLocation();
