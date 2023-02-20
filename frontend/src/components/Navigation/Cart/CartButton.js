@@ -7,14 +7,13 @@ import NavCartItem from "./NavCartItem";
 import NavCartLinks from "./NavCartLinks";
 import styles from "./cart.module.scss";
 
-function CartButton({ cart }) {
+function CartButton({ user }) {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
 
-  const sessionUser = useSelector((state) => state.session.user);
   const items = useSelector(getItems);
   const emptyCartLink = () => {
-    if (sessionUser) {
+    if (user) {
       return (
         <Link className={styles.shopLink} to="/featured">
           Start Shopping
@@ -67,7 +66,7 @@ function CartButton({ cart }) {
     document.addEventListener("click", closeMenu);
 
     return () => document.removeEventListener("click", closeMenu);
-  }, [showMenu, dispatch]);
+  }, [showMenu, user, dispatch]);
 
   const navCart = items.map((item) => {
     return <NavCartItem key={item.id} item={item} />;
