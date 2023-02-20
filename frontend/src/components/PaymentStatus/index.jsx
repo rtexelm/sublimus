@@ -1,6 +1,6 @@
 import React from "react";
 import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
+import { loadStripe } from "@stripe/stripe-js/pure";
 import Acception from "./Acception";
 
 const STRIPE_PUBLIC = process.env.REACT_APP_STRIPE_PUBLIC;

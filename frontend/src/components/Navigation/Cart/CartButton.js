@@ -36,7 +36,7 @@ function CartButton({ user }) {
     return total;
   };
 
-  const containItems = totalItems() > 0;
+  const containItems = user && totalItems() > 0;
 
   const subTotal = () => {
     let total = 0;
@@ -76,7 +76,7 @@ function CartButton({ user }) {
     <>
       <button className={`${styles.button}`} onClick={openMenu}>
         <img className={`${styles.cartIcon}`} src={cartIcon} alt="Cart Icon" />
-        {totalItems() > 0 && <span className={`${styles.cartStatus}`}></span>}
+        {containItems && <span className={`${styles.cartStatus}`}></span>}
       </button>
       {showMenu && (
         <div className={`${styles.cartDropdown}`}>
