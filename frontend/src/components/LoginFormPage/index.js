@@ -34,8 +34,6 @@ function LoginFormPage() {
 
   const demoLogin = (e) => {
     setErrors([]);
-    // setEmail("demo@user.io");
-    // setPassword("password");
     return dispatch(
       sessionActions.login({ email: "demo@user.io", password: "password" })
     ).catch(async (res) => {
