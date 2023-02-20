@@ -47,13 +47,6 @@ function CartButton({ cart }) {
     return total.toFixed(2);
   };
 
-  // if (!sessionUser) setMessage("Sign In To View Cart");
-  // if (items.length === 0) setMessage("Your Cart Is Empty");
-
-  // useEffect(() => {
-  //   dispatch(fetchItems());
-  // }, [dispatch]);
-
   const openMenu = () => {
     if (showMenu) return;
     setShowMenu(true);

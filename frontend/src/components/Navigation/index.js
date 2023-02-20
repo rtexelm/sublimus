@@ -11,24 +11,6 @@ function Navigation() {
   const splash =
     location.pathname === "/" ? styles.navHeadSplash : styles.navHead;
 
-  // let sessionLinks;
-  // if (sessionUser) {
-  //   sessionLinks = (
-  //     <ProfileButton className={styles.profileButton} user={sessionUser} />
-  //   );
-  // } else {
-  //   sessionLinks = (
-  //     <>
-  //       <NavLink className={styles.profileLink} to="/login">
-  //         Log In
-  //       </NavLink>
-  //       <NavLink className={styles.profileLink} to="/signup">
-  //         Sign Up
-  //       </NavLink>
-  //     </>
-  //   );
-  // }
-
   return (
     <header className={splash}>
       <nav className={`${styles.navBar}`}>
@@ -51,7 +33,6 @@ function Navigation() {
         </div>
         <CartButton className={`${styles.profileButton}`} />
         <ProfileButton className={styles.profileButton} user={sessionUser} />
-        {/* {sessionLinks} */}
       </nav>
     </header>
   );
