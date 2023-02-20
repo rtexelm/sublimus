@@ -60,9 +60,9 @@ function CartButton({ cart }) {
   };
 
   useEffect(() => {
-    dispatch(fetchItems());
-
     if (!showMenu) return;
+
+    dispatch(fetchItems());
 
     const closeMenu = () => {
       setShowMenu(false);
