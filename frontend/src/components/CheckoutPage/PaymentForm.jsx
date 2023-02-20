@@ -44,7 +44,7 @@ function PaymentForm({ items }) {
       //`Elements` instance that was used to create the Payment Element
       elements,
       confirmParams: {
-        return_url: `http://localhost:3000/payment`,
+        return_url: `https://sublimus.onrender.com/payment`,
       },
     });
 
