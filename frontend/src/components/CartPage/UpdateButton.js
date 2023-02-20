@@ -13,7 +13,6 @@ function UpdateButton({ item }) {
     if (qty > 0) {
       setErrors([]);
       const data = { id: item.id, quantity: qty };
-      console.log(data);
       return dispatch(updateItem(data));
     }
     return setErrors(["Quantity must be greater than 0"]);

@@ -8,7 +8,6 @@ function RemoveButton({ itemId }) {
 
   const handleRemove = (e) => {
     const data = itemId;
-    console.log(data);
     dispatch(deleteItem(data));
   };
   return (

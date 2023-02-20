@@ -1,6 +1,3 @@
-import React from "react";
-import itemsReducer from "../../store/cart";
-
 export const images = {
   1: "https://s3.amazonaws.com/criterion-production/films/3467090198c948e9fe375d217ce8a10f/nsKgsPFKsXYHSq1dakh5q0P2MUwFel_large.jpg",
   2: "https://s3.amazonaws.com/criterion-production/films/08b31c4ae9660319da03dd2449d6aff9/Zii8WKGlLYK5ZmRMSDqUxUErhODXmW_large.jpg",
@@ -26,3 +23,5 @@ export const images = {
   22: "https://s3.amazonaws.com/criterion-production/films/27347e78f7beca764a3920161b531e11/9TTjP15bKoZruNTlx8uvvB6oPAMC2O_large.jpg",
   23: "https://s3.amazonaws.com/criterion-production/films/95a86570565f93d4441bb107100f4bd6/dDeQTXWZt5xPqkN4JlGErbbrORF7zI_large.jpg",
 };
+
+export default images;

@@ -2,15 +2,16 @@
 
 .navHead {
     z-index: 1;
-    padding: 20px 24px;
+    padding: 20px 48px;
     background-color: #f6f6f6;
 }
 
 .navHeadSplash {
+    box-sizing: border-box;
     position: fixed;
-    width: 96.6%;
-    z-index: 1;
-    padding: 20px 24px;
+    width: 100%;
+    z-index: 10;
+    padding: 20px 48px;
 }
 
 .navBar {
@@ -39,18 +40,3 @@
     }
     }
 }
-
-
-// .profileButton {
-//     cursor: pointer;
-// }
-
-// .profileLink {
-//     font: 400 .9rem 'Figtree',
-//         sans-serif;
-//     text-decoration: none;
-//     color: dimgrey;
-//     &:hover {
-//         color: black;
-//     }
-// }

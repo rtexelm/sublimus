@@ -1,33 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ProfileButton from "./ProfileButton";
 import styles from "./nav.module.scss";
-import CartButton from "./CartButton";
+import CartButton from "./Cart/CartButton";
 
 function Navigation() {
   const location = useLocation();
   const sessionUser = useSelector((state) => state.session.user);
   const splash =
     location.pathname === "/" ? styles.navHeadSplash : styles.navHead;
+  const [user, setUser] = useState(sessionUser);
 
-  // let sessionLinks;
-  // if (sessionUser) {
-  //   sessionLinks = (
-  //     <ProfileButton className={styles.profileButton} user={sessionUser} />
-  //   );
-  // } else {
-  //   sessionLinks = (
-  //     <>
-  //       <NavLink className={styles.profileLink} to="/login">
-  //         Log In
-  //       </NavLink>
-  //       <NavLink className={styles.profileLink} to="/signup">
-  //         Sign Up
-  //       </NavLink>
-  //     </>
-  //   );
-  // }
+  useEffect(() => {
+    setUser(sessionUser);
+  }, [sessionUser]);
 
   return (
     <header className={splash}>
@@ -49,9 +36,8 @@ function Navigation() {
             Shop Featured Picks
           </NavLink>
         </div>
-        <CartButton className={`${styles.profileButton}`} />
-        <ProfileButton className={styles.profileButton} user={sessionUser} />
-        {/* {sessionLinks} */}
+        <CartButton className={`${styles.profileButton}`} user={user} />
+        <ProfileButton className={styles.profileButton} user={user} />
       </nav>
     </header>
   );

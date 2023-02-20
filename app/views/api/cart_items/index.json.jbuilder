@@ -5,6 +5,4 @@ if @items
       json.extract! item.film, :title, :price
     end
   end
-else
-  json.title 'Cart Is Empty'
 end

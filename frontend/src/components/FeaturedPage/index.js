@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchFilms, getFilms } from "../../store/films";
-import { images } from "./imgUrls";
+import images from "../../assets/imgUrls";
 import styles from "./featured.module.scss";
 import { useHistory } from "react-router-dom";
 
