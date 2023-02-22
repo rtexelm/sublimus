@@ -10,10 +10,10 @@ import styles from "./cart.module.scss";
 function CartButton({ user }) {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
-
+  const sessionUser = useSelector((state) => state.session.user);
   const items = useSelector(getItems);
   const emptyCartLink = () => {
-    if (user) {
+    if (sessionUser) {
       return (
         <Link className={styles.shopLink} to="/featured">
           Start Shopping
@@ -36,7 +36,7 @@ function CartButton({ user }) {
     return total;
   };
 
-  const containItems = user && totalItems() > 0;
+  const containItems = sessionUser && totalItems() > 0;
 
   const subTotal = () => {
     let total = 0;
@@ -66,7 +66,7 @@ function CartButton({ user }) {
     document.addEventListener("click", closeMenu);
 
     return () => document.removeEventListener("click", closeMenu);
-  }, [showMenu, user, dispatch]);
+  }, [showMenu, sessionUser, dispatch]);
 
   const navCart = items.map((item) => {
     return <NavCartItem key={item.id} item={item} />;
