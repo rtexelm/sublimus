@@ -64,6 +64,7 @@
 .totals {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     margin-bottom: 16px;
     dt {
         font: $cartMenu;
