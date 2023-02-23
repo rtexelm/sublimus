@@ -52,9 +52,9 @@ function CartButton({ user }) {
   };
 
   useEffect(() => {
-    if (!showMenu) return;
-
     dispatch(fetchItems());
+
+    if (!showMenu) return;
 
     const closeMenu = () => {
       setShowMenu(false);
@@ -66,7 +66,7 @@ function CartButton({ user }) {
     document.addEventListener("click", closeMenu);
 
     return () => document.removeEventListener("click", closeMenu);
-  }, [showMenu, sessionUser, dispatch]);
+  }, [showMenu, sessionUser, containItems, dispatch]);
 
   const navCart = items.map((item) => {
     return <NavCartItem key={item.id} item={item} />;

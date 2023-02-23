@@ -1,7 +1,7 @@
 /* @import "./reset.css" */
 
 html {
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 body {

@@ -39,7 +39,7 @@ Sublimus Selections is a fullstack clone of the Criterion Collection. The intent
 
 ## Attributions
 
-- Icons from Icons8.com and <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Smashicons - Flaticon</a>
+- Icons from Icons8.com, <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Smashicons,</a> <a href="https://www.flaticon.com/free-icons/github" title="github icons">Pixel perfect,</a> <a href="https://www.flaticon.com/free-icons/email" title="email icons">Ilham Fitrotul Hayat</a>
 - Logo by <a href="https://commons.wikimedia.org/wiki/File:The_Criterion_Collection_Logo.svg" title="Criterion Logo">Fleshgrinder</a>
 - Image and video assets from Criterion, (<https://www.criterion.com/>)
 - Fonts from Google fonts

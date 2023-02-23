@@ -1,0 +1,24 @@
+@import "vars.scss";
+
+.social {
+    position: fixed;
+    bottom: 14vh;
+    left: 5vw;
+}
+
+.links {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 9px;
+    justify-content: center;
+    li {
+        cursor: pointer;
+        filter: drop-shadow(3px 3px 6px rgb(0, 0, 0));
+        transition: $buttonTransition;
+        filter: sepia(0) saturate(11) hue-rotate(316deg);
+        &:hover {
+            filter: sepia(25) saturate(11) hue-rotate(316deg);
+        }
+    }
+}
+
