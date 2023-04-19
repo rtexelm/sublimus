@@ -1,6 +1,6 @@
 # Sublimus Selections
 
-Sublimus Selections is a fullstack clone of the Criterion Collection. The intent is mimic the functionalities of the original site like user account creation and authorization. The store contains an index of available products and a shopping cart that may be added to, or removed from.
+Sublimus Selections is a fullstack clone of the Criterion Collection. Mimicing the interactives and styling of the original were priortized.
 
 ## Live Link
 
